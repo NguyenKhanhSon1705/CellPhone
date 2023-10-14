@@ -1,0 +1,87 @@
+@model MenuAdminController
+
+<head>
+    <link rel="stylesheet" href="~/css/validateform.css">
+</head>
+<body>
+    <div>
+        <form action="" method="POST" class="form" id="form-1">
+
+            <div class="form-group form-field">
+                <input id="fullname" name="fullname" asp-for="@Model.menuAdmin.MenuName" rule="required" type="text"
+                    placeholder=" " class="form-input">
+                <label class="form-label" asp-for="@Model.menuAdmin.MenuName"></label>
+                <span class="form-message"></span>
+            </div>
+
+            <div class="d-flex">
+                <div class="form-group form-field w-100">
+                    <input id="fullname" asp-for="@Model.menuAdmin.ControllerName" name="fullname" type="text"
+                        placeholder=" " class="form-input">
+                    <label class="form-label" asp-for="@Model.menuAdmin.ControllerName"></label>
+                    <span class="form-message"></span>
+                </div>
+
+                <div class="form-group form-field w-100">
+                    <input id="fullname" name="fullname" asp-for="@Model.menuAdmin.ActionName" type="text"
+                        placeholder=" " class="form-input">
+                    <label class="form-label" asp-for="@Model.menuAdmin.ActionName"></label>
+                    <span class="form-message"></span>
+                </div>
+            </div>
+
+            <div class="d-flex">
+                <div class="form-group form-field w-100">
+                    <input id="fullname" asp-for="@Model.menuAdmin.ParentID" name="fullname" type="number"
+                        placeholder=" " class="form-input">
+                    <label class="form-label" asp-for="@Model.menuAdmin.ParentID"></label>
+                    <span class="form-message"></span>
+                </div>
+
+                <div class="form-group form-field w-100">
+                    <input id="fullname" name="fullname" asp-for="@Model.menuAdmin.Levels" type="number"
+                        placeholder=" " class="form-input">
+                    <label class="form-label" asp-for="@Model.menuAdmin.Levels"></label>
+                    <span class="form-message"></span>
+                </div>
+
+                <div class="form-group form-field w-100">
+                    <input id="fullname" name="fullname" asp-for="@Model.menuAdmin.MenuOrder" type="number"
+                        placeholder=" " class="form-input">
+                    <label class="form-label" asp-for="@Model.menuAdmin.MenuOrder"></label>
+                    <span class="form-message"></span>
+                </div>
+
+                <div class="form-group form-field w-100">
+                    <input id="fullname" name="fullname" asp-for="@Model.menuAdmin.Position" type="number"
+                        placeholder=" " class="form-input">
+                    <label class="form-label" asp-for="@Model.menuAdmin.Position"></label>
+                    <span class="form-message"></span>
+                </div>
+            </div>
+
+              <div class="d-flex">
+                <div class="form-group form-field w-100">
+                    <input id="fullname" asp-for="@Model.menuAdmin.Icon" name="fullname" type="file"
+                        placeholder=" " class="">
+                    <label class="form-label" asp-for="@Model.menuAdmin.Icon"></label>
+                    <span class="form-message"></span>
+                </div>
+
+                <div class="form-group form-field w-100">
+                    <input id="fullname" name="fullname" asp-for="@Model.menuAdmin.Link" type="text"
+                        placeholder=" " class="form-input">
+                    <label class="form-label" asp-for="@Model.menuAdmin.Link"></label>
+                    <span class="form-message"></span>
+                </div>
+            </div>
+            <button class="form-submit">Đăng ký</button>
+
+        </form>
+    </div>
+
+    <script src="~/js/validateform.js"></script>
+    <script>
+        Validate("#form-1")
+    </script>
+</body>

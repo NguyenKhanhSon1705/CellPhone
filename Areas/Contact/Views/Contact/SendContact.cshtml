@@ -1,0 +1,39 @@
+@model ContactModel
+@{
+    Layout = "_LayoutClient";
+    ViewData["Title"] = "Gửi liên hệ tới";
+}
+
+<div class="d-flex justify-content-center align-items-center">
+    <form asp-action="SendContact" method="post" class="form">
+        <h1 class="p-3">Đây là trang liên hệ</h1>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group form-field">
+            <input asp-for="FullName" placeholder=" " class="form-input" />
+            <label asp-for="FullName" class="form-label"></label>
+            <span asp-validation-for="FullName" class="text-danger"></span>
+        </div>
+        <div class="form-group form-field">
+            <input asp-for="Email" placeholder=" " class="form-input" />
+            <label asp-for="Email" class="form-label"></label>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group form-field">
+            <input asp-for="Phone" placeholder=" " class="form-input" />
+            <label asp-for="Phone" class="form-label"></label>
+            <span asp-validation-for="Phone" class="text-danger"></span>
+        </div>
+
+        <div class="form-group form-field">
+            <textarea rows="5" asp-for="Message" placeholder=" " class="form-input"></textarea>
+            <label asp-for="Message" class="form-label"></label>
+            <span asp-validation-for="Message" class="text-danger"></span>
+        </div>
+
+        <div class="form-group p-3">
+            <input type="submit" value="Gửi liên hệ" class="form-submit" />
+        </div>
+    </form>
+
+</div>
