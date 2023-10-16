@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\grid.css"
     },
     {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\css\\loading.css",
+      "PackagePath": "staticwebassets\\css\\loading.css"
+    },
+    {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
@@ -1905,8 +1909,12 @@
       "PackagePath": "staticwebassets\\images\\users\\profile.jpg"
     },
     {
-      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Ajax.js",
-      "PackagePath": "staticwebassets\\js\\Ajax.js"
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Ajax\\Ajax.js",
+      "PackagePath": "staticwebassets\\js\\Ajax\\Ajax.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Contact.js",
+      "PackagePath": "staticwebassets\\js\\Contact.js"
     },
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\custom.min.js",
@@ -1919,6 +1927,10 @@
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\gleek.js",
       "PackagePath": "staticwebassets\\js\\gleek.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\loading.js",
+      "PackagePath": "staticwebassets\\js\\loading.js"
     },
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\plugins-init\\amchart-init.js",

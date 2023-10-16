@@ -1,7 +1,6 @@
 :root {
   --bg-client: #1dbfaf;
 }
-
 .c-mh-100 {
   min-height: 100px;
 }
@@ -72,4 +71,7 @@
 }
 .c-w-45{
   width: 45%;
+}
+.c-m-e-20{
+  margin-left: 200px;
 }

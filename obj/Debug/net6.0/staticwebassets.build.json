@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MY6AY8CwP+Y0ID2PM5rPIoSk7oqJNN565YAa1otGBoM=",
+  "Hash": "vFc8alGmIIztgl8e8Nopo6OgTdDg1oEHBF8r+KtdC9U=",
   "Source": "CellPhone",
   "BasePath": "_content/CellPhone",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\grid.css"
+    },
+    {
+      "Identity": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\css\\loading.css",
+      "SourceId": "CellPhone",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\",
+      "BasePath": "_content/CellPhone",
+      "RelativePath": "css/loading.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\loading.css"
     },
     {
       "Identity": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\css\\style.css",
@@ -8109,12 +8126,12 @@
       "OriginalItemSpec": "wwwroot\\images\\users\\profile.jpg"
     },
     {
-      "Identity": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Ajax.js",
+      "Identity": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Ajax\\Ajax.js",
       "SourceId": "CellPhone",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\",
       "BasePath": "_content/CellPhone",
-      "RelativePath": "js/Ajax.js",
+      "RelativePath": "js/Ajax/Ajax.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -8123,7 +8140,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\Ajax.js"
+      "OriginalItemSpec": "wwwroot\\js\\Ajax\\Ajax.js"
+    },
+    {
+      "Identity": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Contact.js",
+      "SourceId": "CellPhone",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\",
+      "BasePath": "_content/CellPhone",
+      "RelativePath": "js/Contact.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Contact.js"
     },
     {
       "Identity": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\custom.min.js",
@@ -8175,6 +8209,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\gleek.js"
+    },
+    {
+      "Identity": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\loading.js",
+      "SourceId": "CellPhone",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\",
+      "BasePath": "_content/CellPhone",
+      "RelativePath": "js/loading.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\loading.js"
     },
     {
       "Identity": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\plugins-init\\amchart-init.js",
