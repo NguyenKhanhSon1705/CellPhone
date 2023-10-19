@@ -1,6 +1,7 @@
 import { LoadingStart, LoadingStop } from '../loading.js'
 
 export function deleteItem(url, id , callback) {
+
     let btn = `
         <div class="c-transparent-bg">
             <div class=" d-flex justify-content-center align-items-center h-100">
@@ -86,28 +87,3 @@ export function DetailsItem(url, id, callback) {
         }
     });
 }
-
-// export function deleteItem(url, id) {
-//     if(true){
-//           $.ajax({
-//             url: url,
-//             type: "POST",
-//             data: {
-//                 id: id
-//             },
-//             success: function (data) {
-//                 if (data.code == 200) {
-                  
-//                 }
-//             },
-//             error: function (xhr) {
-//                 alert('error');
-//             }
-//         });
-//     }
-      
-//         // document.querySelector('.confirm').innerHTML = " "
-// }
-
-
-
