@@ -5,6 +5,7 @@ public class CellPhoneDB : IdentityDbContext<AppUserModel>
 {
     public CellPhoneDB(DbContextOptions<CellPhoneDB> options) : base(options)
     {
+        
     }
     protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
     {

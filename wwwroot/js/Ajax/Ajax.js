@@ -1,54 +1,4 @@
-import { LoadingStart, LoadingStop } from '../loading.js'
-
-export function deleteItem(url, id , callback) {
-
-    let btn = `
-        <div class="c-transparent-bg">
-            <div class=" d-flex justify-content-center align-items-center h-100">
-                <div class="confirm p-4 bg-white c-boxshow rounded">
-                    <div class="text-center">
-                        <div>
-                            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-                            <svg width="60px" height="60px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12 16.99V17M12 7V14M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-                                    stroke="#d5541d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <h4 class="center p-3">Bạn có chắc chắn muốn xóa không</h4>
-                    </div>
-                    <div class="d-flex justify-content-around">
-                        <button  class="btn c-btn-no no" >Hủy</button>
-                        <button class="btn c-btn-yes yes">Tôi đồng ý</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-      `
-    $(".confirm").append(btn)
-   
-    $(document).on('click', '.no', function () {
-        $(".confirm").empty()
-    });
-    $(document).on('click', '.yes', function () {
-        $.ajax({
-            url: url,
-            type: "POST",
-            data: {
-                id: id
-            },
-            success: function (data) {
-                if (data.code == 200) {
-                    callback(data.code)
-                }
-            },
-            error: function (xhr) {
-                alert('error');
-            }
-        });
-        $(".confirm").empty()
-    });
-}
+import { LoadingStart, LoadingStop, toast } from '../loading.js'
 
 export function GetList(url, callback) {
     LoadingStart();
@@ -63,27 +13,251 @@ export function GetList(url, callback) {
             }
         },
         error: function (xhr) {
-            alert("error");
+            toast({
+                title: "Thông báo",
+                message: "Lỗi thông thể kết nối",
+                type: 'error',
+                duration: 5000
+            });
         }
     });
 }
 
 export function DetailsItem(url, id, callback) {
+
+    var token = $('input[name="__RequestVerificationToken"]').val()
+    var object = {
+        'id': id,
+        '__RequestVerificationToken': token
+    }
     LoadingStart();
     $.ajax({
         url: url,
         type: "POST",
-        data: {
-            id: id
-        },
+        data: object,
         success: function (data) {
             if (data.code == 200) {
                 callback(data)
                 LoadingStop();
+                toast({ title: "Thông báo", message: "Xem chi tiết", type: 'success', duration: 5000 });
             }
         },
         error: function (xhr) {
-            alert('error');
+            toast({
+                title: "Thông báo",
+                message: "Lỗi thông thể kết nối",
+                type: 'error',
+                duration: 5000
+            });
+        }
+    });
+}
+
+export function EditItem(url, object, callback, check = true) {
+    var token = $('input[name="__RequestVerificationToken"]').val();
+    object.__RequestVerificationToken = token;
+    if (check) {
+        let body = document.querySelector('.content-body');
+        let div = document.createElement('div');
+        div.classList.add('confirm');
+        $(document).off('click', '.no');
+        $(document).off('click', '.yes');
+        let btn = `
+        <div class="c-transparent-bg preve-close">
+                <div class=" d-flex justify-content-center align-items-center h-100">
+                    <div class="animate p-4 bg-white c-boxshow rounded">
+                        <div class="text-center">
+                            <div>
+                                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                <svg width="60px" height="60px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 16.99V17M12 7V14M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                                        stroke="#d5541d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <h4 class="center p-3">Bạn muốn cập nhật không</h4>
+                        </div>
+                        <div class="d-flex justify-content-around">
+                            <button  class=" c-btn-no no" >Hủy</button>
+                            <button class=" c-btn-yes yes">Đồng ý</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          `
+        div.innerHTML = btn;
+        body.append(div);
+
+        $(document).on('click', '.no', function () {
+            div.remove();
+        });
+        $(document).on('click', '.preve-close', function () {
+        });
+        $(document).on('click', '.yes', function () {
+            LoadingStart();
+            $.ajax({
+                url: url,
+                type: "POST",
+                data: object,
+                success: function (data) {
+                    if (data.code === 200) {
+                        toast({
+                            title: "Thành công",
+                            message: "Cập nhật thông tin thành công",
+                            type: "success",
+                            duration: 3000
+                        })
+                        callback(data)
+                        LoadingStop()
+                    } else {
+                        data.errors.forEach((error) => {
+                            toast({
+                                title: data.message,
+                                message: error,
+                                type: "error",
+                                duration: 3000
+                            })
+                        })
+                        LoadingStop()
+                    }
+                }
+            });
+            div.remove();
+        });
+    }
+    else if (check == false) {
+        LoadingStart();
+        $.ajax({
+            url: url,
+            type: "POST",
+            data: object,
+            success: function (data) {
+                if (data.code === 200) {
+                    toast({
+                        title: "Thành công",
+                        message: "Cập nhật thông tin thành công",
+                        type: "success",
+                        duration: 3000
+                    })
+                    callback(data)
+                    LoadingStop()
+                } else {
+                    data.errors.forEach((error) => {
+                        toast({
+                            title: data.message,
+                            message: error,
+                            type: "error",
+                            duration: 3000
+                        })
+                    })
+                    LoadingStop()
+                }
+            }
+        });
+    }
+}
+
+export function CreateItem(url, object, callback) {
+    LoadingStart()
+    var token = $('input[name="__RequestVerificationToken"]').val();
+    object.__RequestVerificationToken = token
+    $.ajax({
+        url: url,
+        type: "POST",
+        data: object,
+        success: function (data) {
+            if (data.code == 200) {
+                callback(data)
+                LoadingStop()
+            }
+        }
+    });
+}
+
+export function deleteItem(url, id, callback) {
+    var token = $('input[name="__RequestVerificationToken"]').val();
+    var data = {
+        'id': id,
+        '__RequestVerificationToken': token
+    }
+    let body = document.querySelector('.content-body');
+    let div = document.createElement('div');
+    div.classList.add('confirm');
+    $(document).off('click', '.no');
+    $(document).off('click', '.yes');
+
+    let btn = `
+        <div class="c-transparent-bg preve-close">
+                <div class="c-form d-flex justify-content-center align-items-center">
+                    <div class="animate p-4 bg-white c-boxshow rounded">
+                        <div class="text-center">
+                            <div>
+                                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                <svg width="60px" height="60px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 16.99V17M12 7V14M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                                        stroke="#d5541d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <h4 class="center p-3">Bạn muốn xóa không !</h4>
+                        </div>
+                        <div class="d-flex justify-content-around">
+                            <button  class=" c-btn-no no" >Hủy</button>
+                            <button class=" c-btn-yes yes">Đồng ý</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          `
+    div.innerHTML = btn;
+    body.append(div);
+
+    $(document).on('click', '.no', function () {
+        div.remove();
+    });
+    $(document).on('click', '.preve-close', function () {
+        div.remove()
+    });
+    $(document).on('click', '.c-form', function (e) {
+        e.stopPropagation();
+    });
+    $(document).on('click', '.yes', function () {
+        LoadingStart()
+        $.ajax({
+            url: url,
+            type: "POST",
+            data: data,
+            success: function (data) {
+                if (data.code === 200) {
+                    callback(data)
+                    LoadingStop()
+                }
+            },
+            error: function (xhr) {
+                toast({
+                    title: "Thông báo",
+                    message: "Lỗi thông thể kết nối",
+                    type: 'error',
+                    duration: 3000
+                });
+            }
+        });
+        div.remove();
+    });
+}
+
+
+export function Pagination(url, CurrentPage = 1, callback) {
+    LoadingStart();
+    $.ajax({
+        url: url,
+        type: 'GET',
+        data: { CurrentPage: CurrentPage },
+        success: function (data) {
+            if (data.code === 200) {
+                callback(data.data)
+                LoadingStop();
+            }
         }
     });
 }

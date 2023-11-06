@@ -1,0 +1,158 @@
+@model AppUserModel;
+@Html.AntiForgeryToken()
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="container emp-profile">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="profile-img">
+                                        @if(Model.Pricture != null){
+                                            <img alt="" src="@Model.Pricture">
+                                        }else{
+                                            <svg width="150px" height="150px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#d13d3d"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="9" cy="9" r="2" stroke="#1C274C" stroke-width="1.5"></circle> <path d="M13 15C13 16.1046 13 17 9 17C5 17 5 16.1046 5 15C5 13.8954 6.79086 13 9 13C11.2091 13 13 13.8954 13 15Z" stroke="#1C274C" stroke-width="1.5"></path> <path opacity="0.5" d="M2 12C2 8.22876 2 6.34315 3.17157 5.17157C4.34315 4 6.22876 4 10 4H14C17.7712 4 19.6569 4 20.8284 5.17157C22 6.34315 22 8.22876 22 12C22 15.7712 22 17.6569 20.8284 18.8284C19.6569 20 17.7712 20 14 20H10C6.22876 20 4.34315 20 3.17157 18.8284C2 17.6569 2 15.7712 2 12Z" stroke="#1C274C" stroke-width="1.5"></path> <path d="M19 12H15" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> <path d="M19 9H14" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> <path opacity="0.9" d="M19 15H16" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+                                        }
+                                        
+                                        <div class=" btn box-shadown">
+                                            Change Photo
+                                            <input type="file" name="file" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="profile-head">
+                                        <h5>
+                                            @(Model.FullName != null ? Model.FullName : "Chưa đặt tên")
+                                        </h5>
+                                        <h6>
+                                            @Model.Email
+                                        </h6>
+                                        <p class="proile-rating">Chức vụ: <span>Role</span></p>
+                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home"
+                                                    role="tab" aria-controls="home" aria-selected="true">About</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile"
+                                                    role="tab" aria-controls="profile"
+                                                    aria-selected="false">Timeline</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                     <input  type="button" class="buttonDelete profile-edit-btn m-2 p-2 rounded text-danger box-shadow" name="btnAddMore"
+                                        value="Xóa tài khoản này" data-id="@Model.Id"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="tab-content profile-tab" id="myTabContent">
+                                        <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                            aria-labelledby="home-tab">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>ID</label> 
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>@Model.Id</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>Họ tên</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>@Model.FullName</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>Email</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>@Model.Email</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>Chức vụ </label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>role</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>Phone</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>@Model.PhoneNumber</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>Địa chỉ</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>@Model.Address</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>Xác nhận Email</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>@(Model.EmailConfirmed != false ? "Đã xác nhận" :"Chưa kích hoạt")</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="profile" role="tabpanel"
+                                            aria-labelledby="profile-tab">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>Ngày sinh</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>@Model.Birthday </p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>Ngày tham gia</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>@Model.CreationDate</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label>Giới tính</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p>
+                                                        @if(Model.Gender == 1){
+                                                            <span>Nam</span>
+                                                        }else if(Model.Gender == 0){
+                                                            <span>Nữ</span>
+                                                        }else if(Model.Gender == 2){
+                                                            <span>Khác</span>
+                                                        }
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+</div>
+<script type="module" src="~/js/UserMange.js"></script>
+

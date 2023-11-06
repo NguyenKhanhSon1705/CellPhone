@@ -1,0 +1,84 @@
+@model ProfileUserModel;
+@{
+    Layout="_LayoutClient";
+}
+<div class="">
+    <form class="form-account w-100 h-100">
+        <div class="p-1 d-flex justify-content-center">
+            <svg fill="#1AC7B6" width="79px" height="79px" viewBox="-8 0 512 512" xmlns="http://www.w3.org/2000/svg"
+                stroke="#1AC7B6">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path
+                        d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z">
+                    </path>
+                </g>
+            </svg>
+        </div>
+        <div class="form-field w-50">
+            <input readonly name="fullname" asp-for="FullName" class="form-control form-input border-button-input"
+                placeholder=" " />
+            <span class="form-label">@Html.DisplayNameFor(model => model.FullName)</span>
+            <span asp-validation-for="FullName" class="text-danger"></span>
+        </div>
+        <div class="form-field w-50">
+            <input readonly name="email" asp-for="Email" class="form-control form-input border-button-input"
+                placeholder=" " />
+            <span class="form-label">@Html.DisplayNameFor(model => model.Email)</span>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-field w-50">
+            <input readonly name="phoneNumber" asp-for="PhoneNumber" class="form-control form-input border-button-input"
+                placeholder=" " />
+            <span class="form-label">@Html.DisplayNameFor(model => model.PhoneNumber)</span>
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+
+        <div class="form-field w-50">
+            <input readonly name="address" asp-for="Address" class="form-control form-input border-button-input"
+                placeholder=" " />
+            <span class="form-label">@Html.DisplayNameFor(model => model.Address)</span>
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+
+        <div class="form-field w-50">
+            <input readonly name="birthDay" asp-for="BirthDay" class="form-control form-input border-button-input"
+                placeholder=" " />
+            <span class="form-label">@Html.DisplayNameFor(model => model.BirthDay)</span>
+            <span asp-validation-for="BirthDay" class="text-danger"></span>
+        </div>
+
+        <div class="form-field w-50">
+            <input readonly name="creationDate" asp-for="CreationDate"
+                class="form-control form-input border-button-input" placeholder=" " />
+            <span class="form-label">@Html.DisplayNameFor(model => model.CreationDate)</span>
+            <span asp-validation-for="CreationDate" class="text-danger"></span>
+        </div>
+
+        <div class="form-field w-50 d-flex justify-content-center ">
+            <span>Giới tính: </span>
+            <div class="px-3">
+                <label for="maleRadio">Nam</label>
+                <input readonly type="radio" id="maleRadio" name="male" value="1" />
+            </div>
+            <div class="px-3">
+                <label for="femaleRadio">Nữ</label>
+                <input readonly type="radio" id="femaleRadio" name="male" value="0" />
+            </div>
+             <div class="px-3">
+                <label for="femaleRadio">Khác</label>
+                <input readonly type="radio" id="notGender" name="male" value="2" />
+            </div>
+            <span asp-validation-for="Gender" class="text-danger"></span>
+        </div>
+        <div>
+            <button id="EditProfile"  type="button" class="btn-submit px-2">Chỉnh sửa thông tin</button>
+            <button name="buttonSubmit" type="button" class="btn-submit px-2 d-none">Lưu cập nhật</button>
+        </div>
+    </form>
+</div>
+<div id="toast"></div>
+
+</script>
+<script type="module" src="~/js/ProfileUser.js"></script>

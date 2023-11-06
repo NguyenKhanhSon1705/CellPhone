@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\loading.css"
     },
     {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\css\\site.min.css",
+      "PackagePath": "staticwebassets\\css\\site.min.css"
+    },
+    {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
@@ -1385,6 +1389,14 @@
       "PackagePath": "staticwebassets\\images\\Facebook-logo.png"
     },
     {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\Logo-contact.png",
+      "PackagePath": "staticwebassets\\images\\Logo-contact.png"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\admin.png",
+      "PackagePath": "staticwebassets\\images\\admin.png"
+    },
+    {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\avatar\\1.jpg",
       "PackagePath": "staticwebassets\\images\\avatar\\1.jpg"
     },
@@ -1777,6 +1789,10 @@
       "PackagePath": "staticwebassets\\images\\paypal.png"
     },
     {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\t_m_12.webp",
+      "PackagePath": "staticwebassets\\images\\products\\t_m_12.webp"
+    },
+    {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\profile\\1.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\1.jpg"
     },
@@ -1913,8 +1929,28 @@
       "PackagePath": "staticwebassets\\js\\Ajax\\Ajax.js"
     },
     {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Ajax\\Convert.js",
+      "PackagePath": "staticwebassets\\js\\Ajax\\Convert.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Claims.js",
+      "PackagePath": "staticwebassets\\js\\Claims.js"
+    },
+    {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Contact.js",
       "PackagePath": "staticwebassets\\js\\Contact.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\ProfileUser.js",
+      "PackagePath": "staticwebassets\\js\\ProfileUser.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Roles.js",
+      "PackagePath": "staticwebassets\\js\\Roles.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\UserMange.js",
+      "PackagePath": "staticwebassets\\js\\UserMange.js"
     },
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\custom.min.js",
@@ -2477,8 +2513,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\AUTHORS.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\AUTHORS.txt"
+    },
+    {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\README.md",
+      "PackagePath": "staticwebassets\\lib\\jquery\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\bower.json",
+      "PackagePath": "staticwebassets\\lib\\jquery\\bower.json"
     },
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\dist\\jquery.js",
@@ -2491,6 +2539,222 @@
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\dist\\jquery.slim.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\package.json",
+      "PackagePath": "staticwebassets\\lib\\jquery\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\.editorconfig",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\.editorconfig"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\.eslintrc.cjs",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\.eslintrc.cjs"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\CHANGELOG.md",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\CHANGELOG.md"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\multiple-select"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\README.md",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\bower.json",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\bower.json"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\deploy.sh",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\deploy.sh"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\deploy_key.enc",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\deploy_key.enc"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-cz-CS.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-cz-CS.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-cz-CS.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-cz-CS.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-da-DK.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-da-DK.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-da-DK.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-da-DK.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-en-US.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-en-US.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-en-US.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-en-US.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-es-ES.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-es-ES.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-es-ES.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-es-ES.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-fr-FR.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-fr-FR.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-fr-FR.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-fr-FR.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-hu-HU.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-hu-HU.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-hu-HU.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-hu-HU.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-it-IT.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-it-IT.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-it-IT.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-it-IT.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-pt-BR.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-pt-BR.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-pt-BR.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-pt-BR.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-ru-RU.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-ru-RU.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-ru-RU.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-ru-RU.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-vi-VN.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-vi-VN.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-vi-VN.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-vi-VN.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-zh-CN.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-zh-CN.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-zh-CN.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-zh-CN.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-zh-TW.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-zh-TW.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-zh-TW.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-zh-TW.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select-es.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select-es.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select-es.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select-es.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select-locale-all.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select-locale-all.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select-locale-all.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select-locale-all.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select-vue-es.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select-vue-es.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select-vue-es.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select-vue-es.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select-vue.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select-vue.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select-vue.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select-vue.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select.css",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select.min.css",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select.min.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\themes\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\themes\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\themes\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\themes\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\index.d.ts",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\index.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\lgtm.yml",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\lgtm.yml"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\multiple-select.jquery.json",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\multiple-select.jquery.json"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\package.json",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\package.json"
     },
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\plugins\\amcharts\\amcharts.js",

@@ -1,7 +1,9 @@
 
 using Google.Protobuf.WellKnownTypes;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,9 +20,12 @@ builder.Services.AddDbContext<CellPhoneDB>(options =>
     options.UseMySQL(connect);
 });
 
-/*builder.Services.AddIdentity<CellPhoneDB , AppUserModel>()
-                    .AddEntityFrameworkStores<CellPhoneDB>()
-                    .AddDefaultTokenProviders();*/
+// services identity 
+
+builder.Services.AddIdentity<AppUserModel, IdentityRole>()
+    .AddEntityFrameworkStores<CellPhoneDB>()
+    .AddDefaultTokenProviders();
+
 
 builder.Services.Configure<IdentityOptions>(options =>
 {
@@ -33,13 +38,13 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Password.RequiredUniqueChars = 1;
 
     // Lockout settings.
-    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(3);
     options.Lockout.MaxFailedAccessAttempts = 5;
     options.Lockout.AllowedForNewUsers = true;
 
     // User settings.
     options.User.AllowedUserNameCharacters =
-    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
     options.User.RequireUniqueEmail = false;
 
     // Cấu hình đăng nhập.
@@ -48,11 +53,15 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.SignIn.RequireConfirmedAccount = true;
 });
 
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Account/Login";
+    options.LogoutPath = "/Account/Logout";
+    // options.AccessDeniedPath = "/khongduoctruycap.html";
+});
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-
-
 
 var app = builder.Build();
 
@@ -75,7 +84,7 @@ app.UseAuthorization();  // xac thuc  quyen truy  cap
 
 // app.MapAreaControllerRoute(
 //     name: "default",
-//     pattern: "/{controller=LogIn}/{action=LogIn}/{id?}",
+//     pattern: "/{controller=LogIn}/{action=Index}/{id?}",
 //     areaName: "LogIn"
 // );
 
