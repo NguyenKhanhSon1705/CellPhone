@@ -1,10 +1,16 @@
 
-using Microsoft.EntityFrameworkCore;var builder = WebApplication.CreateBuilder(args);
+using Google.Protobuf.WellKnownTypes;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using System;
+
+var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOptions();
 var maisetting = builder.Configuration.GetSection("MailSettings");
 builder.Services.Configure<MailSettings>(maisetting);
-builder.Services.AddSingleton<IEmailSender,SendMailService>();
+builder.Services.AddSingleton<IEmailSender, SendMailService>();
 
 
 // Add services to the container.
@@ -14,10 +20,53 @@ builder.Services.AddDbContext<CellPhoneDB>(options =>
     options.UseMySQL(connect);
 });
 
+// services identity 
+
+builder.Services.AddIdentity<AppUserModel, IdentityRole>()
+    .AddEntityFrameworkStores<CellPhoneDB>()
+    .AddDefaultTokenProviders();
+
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    // Password settings.
+    options.Password.RequireDigit = false;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequiredLength = 6;
+    options.Password.RequiredUniqueChars = 1;
+
+    // Lockout settings.
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(3);
+    options.Lockout.MaxFailedAccessAttempts = 10;
+    options.Lockout.AllowedForNewUsers = true;
+
+    // User settings.
+    options.User.AllowedUserNameCharacters =
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+    options.User.RequireUniqueEmail = false;
+
+    // Cấu hình đăng nhập.
+    options.SignIn.RequireConfirmedEmail = true;            // Cấu hình xác thực địa chỉ email (email phải tồn tại)
+    options.SignIn.RequireConfirmedPhoneNumber = false;     // Xác thực số điện thoại
+    options.SignIn.RequireConfirmedAccount = true;
+});
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Account/Login";
+    options.LogoutPath = "/Account/Logout";
+    options.AccessDeniedPath = "/khongduoctruycap.html";
+});
+// builder.Services.ConfigureApplicationCookie(options =>
+// {
+//     options.LoginPath = "/admin/Login";
+//     options.LogoutPath = "/admin/Logout";
+//     options.AccessDeniedPath = "/khongduoctruycap.html";
+// });
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-
-
 
 var app = builder.Build();
 
@@ -35,9 +84,13 @@ app.UseStaticFiles();
 app.UseRouting();
 app.MapControllers();
 
+app.UseAuthentication(); // xac dinh danh tinh 
+app.UseAuthorization();  // xac thuc  quyen truy  cap
+
+
 // app.MapAreaControllerRoute(
 //     name: "default",
-//     pattern: "/{controller=LogIn}/{action=LogIn}/{id?}",
+//     pattern: "/{controller=LogIn}/{action=Index}/{id?}",
 //     areaName: "LogIn"
 // );
 

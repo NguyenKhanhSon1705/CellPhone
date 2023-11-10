@@ -1,9 +1,9 @@
-
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
 [Area("Contact")]
 [Route("/admin/contact/[action]")]
-// /Contact/Contact/Index
+[Authorize(Roles ="Administrator")]
 public class ContactController : Controller
 {
     private readonly CellPhoneDB _context;
@@ -16,24 +16,28 @@ public class ContactController : Controller
         _emailSender = sendmail;
     }
     [HttpGet]
-    public async Task<IActionResult> Index()
+    public IActionResult Index()
     {
         return View();
-        // return Json(new {code = 200 , list = ListContact, message = "Success"});
     }
     [HttpGet]
-    public JsonResult ViewContact()
+    public JsonResult IndexJson()
     {
         var ListContact = _context.contacts.ToList();
-        // return View();
         return Json(new {code = 200 , list = ListContact, message = "Success"});
     }
 
-    [HttpPost()]
+    [HttpPost]
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> Details(int id)
     {
         try{
+
             var detail = await _context.contacts.Where(i => i.Id == id).FirstOrDefaultAsync();
+            if(detail.Status != 1){
+                detail.Status = 1;
+                await _context.SaveChangesAsync();
+            }
               return Json(new{code = 200 , details = detail , message = "Thành Công"});
             
         }catch (Exception ex){
@@ -41,8 +45,8 @@ public class ContactController : Controller
 
         }
     }
-
-    [HttpPost()]
+    [HttpPost]
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> Delete(int id)
     {
         try
@@ -68,8 +72,8 @@ public class ContactController : Controller
     {
         return View();
     }
-
     [HttpPost("/contact")]
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> SendContact([Bind("FullName,Email,Message,Phone")] ContactModel contact)
     {
         if (ModelState.IsValid)
@@ -89,7 +93,4 @@ public class ContactController : Controller
     {
         return View();
     }
-
-
-
 }

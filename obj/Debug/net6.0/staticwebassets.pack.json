@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets\\css\\grid.css"
     },
     {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\css\\loading.css",
+      "PackagePath": "staticwebassets\\css\\loading.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\css\\site.min.css",
+      "PackagePath": "staticwebassets\\css\\site.min.css"
+    },
+    {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
@@ -1381,6 +1389,14 @@
       "PackagePath": "staticwebassets\\images\\Facebook-logo.png"
     },
     {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\Logo-contact.png",
+      "PackagePath": "staticwebassets\\images\\Logo-contact.png"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\admin.png",
+      "PackagePath": "staticwebassets\\images\\admin.png"
+    },
+    {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\avatar\\1.jpg",
       "PackagePath": "staticwebassets\\images\\avatar\\1.jpg"
     },
@@ -1769,8 +1785,20 @@
       "PackagePath": "staticwebassets\\images\\member\\profile.png"
     },
     {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\notfound.png",
+      "PackagePath": "staticwebassets\\images\\notfound.png"
+    },
+    {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\paypal.png",
       "PackagePath": "staticwebassets\\images\\paypal.png"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\2161ce1698ee64e1d773704f83715d7b.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\2161ce1698ee64e1d773704f83715d7b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\t_m_12.webp",
+      "PackagePath": "staticwebassets\\images\\products\\t_m_12.webp"
     },
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\profile\\1.jpg",
@@ -1905,8 +1933,32 @@
       "PackagePath": "staticwebassets\\images\\users\\profile.jpg"
     },
     {
-      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Ajax.js",
-      "PackagePath": "staticwebassets\\js\\Ajax.js"
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Ajax\\Ajax.js",
+      "PackagePath": "staticwebassets\\js\\Ajax\\Ajax.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Ajax\\Convert.js",
+      "PackagePath": "staticwebassets\\js\\Ajax\\Convert.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Claims.js",
+      "PackagePath": "staticwebassets\\js\\Claims.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Contact.js",
+      "PackagePath": "staticwebassets\\js\\Contact.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\ProfileUser.js",
+      "PackagePath": "staticwebassets\\js\\ProfileUser.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Roles.js",
+      "PackagePath": "staticwebassets\\js\\Roles.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\UserMange.js",
+      "PackagePath": "staticwebassets\\js\\UserMange.js"
     },
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\custom.min.js",
@@ -1919,6 +1971,10 @@
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\gleek.js",
       "PackagePath": "staticwebassets\\js\\gleek.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\loading.js",
+      "PackagePath": "staticwebassets\\js\\loading.js"
     },
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\plugins-init\\amchart-init.js",
@@ -2253,6 +2309,326 @@
       "PackagePath": "staticwebassets\\js\\validateform.js"
     },
     {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\CHANGELOG.md",
+      "PackagePath": "staticwebassets\\lib\\axios\\CHANGELOG.md"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\axios"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\MIGRATION_GUIDE.md",
+      "PackagePath": "staticwebassets\\lib\\axios\\MIGRATION_GUIDE.md"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\README.md",
+      "PackagePath": "staticwebassets\\lib\\axios\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\SECURITY.md",
+      "PackagePath": "staticwebassets\\lib\\axios\\SECURITY.md"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\dist\\axios.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\dist\\axios.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\dist\\axios.js.map",
+      "PackagePath": "staticwebassets\\lib\\axios\\dist\\axios.js.map"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\dist\\axios.min.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\dist\\axios.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\dist\\axios.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\axios\\dist\\axios.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\dist\\browser\\axios.cjs",
+      "PackagePath": "staticwebassets\\lib\\axios\\dist\\browser\\axios.cjs"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\dist\\browser\\axios.cjs.map",
+      "PackagePath": "staticwebassets\\lib\\axios\\dist\\browser\\axios.cjs.map"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\dist\\esm\\axios.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\dist\\esm\\axios.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\dist\\esm\\axios.js.map",
+      "PackagePath": "staticwebassets\\lib\\axios\\dist\\esm\\axios.js.map"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\dist\\esm\\axios.min.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\dist\\esm\\axios.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\dist\\esm\\axios.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\axios\\dist\\esm\\axios.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\dist\\node\\axios.cjs",
+      "PackagePath": "staticwebassets\\lib\\axios\\dist\\node\\axios.cjs"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\dist\\node\\axios.cjs.map",
+      "PackagePath": "staticwebassets\\lib\\axios\\dist\\node\\axios.cjs.map"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\index.d.cts",
+      "PackagePath": "staticwebassets\\lib\\axios\\index.d.cts"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\index.d.ts",
+      "PackagePath": "staticwebassets\\lib\\axios\\index.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\index.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\adapters\\README.md",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\adapters\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\adapters\\adapters.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\adapters\\adapters.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\adapters\\http.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\adapters\\http.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\adapters\\xhr.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\adapters\\xhr.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\axios.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\axios.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\cancel\\CancelToken.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\cancel\\CancelToken.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\cancel\\CanceledError.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\cancel\\CanceledError.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\cancel\\isCancel.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\cancel\\isCancel.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\core\\Axios.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\core\\Axios.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\core\\AxiosError.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\core\\AxiosError.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\core\\AxiosHeaders.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\core\\AxiosHeaders.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\core\\InterceptorManager.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\core\\InterceptorManager.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\core\\README.md",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\core\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\core\\buildFullPath.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\core\\buildFullPath.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\core\\dispatchRequest.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\core\\dispatchRequest.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\core\\mergeConfig.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\core\\mergeConfig.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\core\\settle.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\core\\settle.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\core\\transformData.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\core\\transformData.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\defaults\\index.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\defaults\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\defaults\\transitional.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\defaults\\transitional.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\env\\README.md",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\env\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\env\\classes\\FormData.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\env\\classes\\FormData.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\env\\data.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\env\\data.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\AxiosTransformStream.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\AxiosTransformStream.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\AxiosURLSearchParams.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\AxiosURLSearchParams.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\HttpStatusCode.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\HttpStatusCode.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\README.md",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\ZlibHeaderTransformStream.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\ZlibHeaderTransformStream.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\bind.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\bind.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\buildURL.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\buildURL.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\callbackify.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\callbackify.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\combineURLs.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\combineURLs.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\cookies.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\cookies.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\deprecatedMethod.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\deprecatedMethod.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\formDataToJSON.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\formDataToJSON.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\formDataToStream.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\formDataToStream.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\fromDataURI.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\fromDataURI.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\isAbsoluteURL.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\isAbsoluteURL.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\isAxiosError.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\isAxiosError.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\isURLSameOrigin.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\isURLSameOrigin.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\null.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\null.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\parseHeaders.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\parseHeaders.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\parseProtocol.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\parseProtocol.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\readBlob.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\readBlob.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\speedometer.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\speedometer.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\spread.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\spread.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\throttle.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\throttle.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\toFormData.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\toFormData.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\toURLEncodedForm.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\toURLEncodedForm.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\helpers\\validator.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\helpers\\validator.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\platform\\browser\\classes\\Blob.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\platform\\browser\\classes\\Blob.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\platform\\browser\\classes\\FormData.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\platform\\browser\\classes\\FormData.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\platform\\browser\\classes\\URLSearchParams.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\platform\\browser\\classes\\URLSearchParams.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\platform\\browser\\index.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\platform\\browser\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\platform\\index.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\platform\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\platform\\node\\classes\\FormData.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\platform\\node\\classes\\FormData.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\platform\\node\\classes\\URLSearchParams.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\platform\\node\\classes\\URLSearchParams.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\platform\\node\\index.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\platform\\node\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\lib\\utils.js",
+      "PackagePath": "staticwebassets\\lib\\axios\\lib\\utils.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\axios\\package.json",
+      "PackagePath": "staticwebassets\\lib\\axios\\package.json"
+    },
+    {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
@@ -2465,8 +2841,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\AUTHORS.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\AUTHORS.txt"
+    },
+    {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\README.md",
+      "PackagePath": "staticwebassets\\lib\\jquery\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\bower.json",
+      "PackagePath": "staticwebassets\\lib\\jquery\\bower.json"
     },
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\dist\\jquery.js",
@@ -2479,6 +2867,222 @@
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\dist\\jquery.slim.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\jquery\\package.json",
+      "PackagePath": "staticwebassets\\lib\\jquery\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\.editorconfig",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\.editorconfig"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\.eslintrc.cjs",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\.eslintrc.cjs"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\CHANGELOG.md",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\CHANGELOG.md"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\multiple-select"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\README.md",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\bower.json",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\bower.json"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\deploy.sh",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\deploy.sh"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\deploy_key.enc",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\deploy_key.enc"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-cz-CS.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-cz-CS.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-cz-CS.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-cz-CS.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-da-DK.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-da-DK.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-da-DK.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-da-DK.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-en-US.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-en-US.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-en-US.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-en-US.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-es-ES.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-es-ES.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-es-ES.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-es-ES.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-fr-FR.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-fr-FR.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-fr-FR.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-fr-FR.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-hu-HU.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-hu-HU.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-hu-HU.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-hu-HU.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-it-IT.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-it-IT.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-it-IT.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-it-IT.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-pt-BR.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-pt-BR.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-pt-BR.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-pt-BR.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-ru-RU.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-ru-RU.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-ru-RU.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-ru-RU.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-vi-VN.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-vi-VN.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-vi-VN.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-vi-VN.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-zh-CN.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-zh-CN.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-zh-CN.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-zh-CN.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-zh-TW.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-zh-TW.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\locale\\multiple-select-zh-TW.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\locale\\multiple-select-zh-TW.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select-es.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select-es.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select-es.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select-es.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select-locale-all.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select-locale-all.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select-locale-all.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select-locale-all.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select-vue-es.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select-vue-es.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select-vue-es.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select-vue-es.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select-vue.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select-vue.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select-vue.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select-vue.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select.css",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select.min.css",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select.min.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\multiple-select.min.js",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\multiple-select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\themes\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\themes\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\dist\\themes\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\dist\\themes\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\index.d.ts",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\index.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\lgtm.yml",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\lgtm.yml"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\multiple-select.jquery.json",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\multiple-select.jquery.json"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\lib\\multiple-select\\package.json",
+      "PackagePath": "staticwebassets\\lib\\multiple-select\\package.json"
     },
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\plugins\\amcharts\\amcharts.js",

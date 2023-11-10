@@ -12,7 +12,7 @@ public class MenuAdminController : Controller
     }
 
     [HttpGet]
-    public async Task<IActionResult> Index()
+    public IActionResult Index()
     {
         
         return View();
@@ -21,11 +21,11 @@ public class MenuAdminController : Controller
     [BindProperty]
     public MenuAdminModel menuAdmin { get; set; }
 
-    [HttpGet]
+    /*[HttpGet]
     public async Task<IActionResult> Create()
     {
     //    await _mailService.SendEmailAsync("nks5k3@gmail.com" , "Notications","Tôi đã gửi thành công email rồi kakaan");
         
         return View();
-    }
+    }*/
 }

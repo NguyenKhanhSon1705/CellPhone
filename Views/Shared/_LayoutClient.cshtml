@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S-phone</title>
-    <link rel="stylesheet" href="~/css/style.css">
+     <link rel="stylesheet" href="~/css/validateform.css">
+    <link href="~/css/style.css" rel="stylesheet">
+    <link href="~/css/custom.css" rel="stylesheet">
+    <link href="~/css/loading.css" rel="stylesheet">
+    <link href="~/css/site.min.css" rel="stylesheet">
     <link rel="stylesheet" href="~/css/styleClient.css">
     <link rel="stylesheet" href="~/css/grid.css">
-    <link rel="stylesheet" href="~/css/validateform.css">
+
      <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -16,72 +20,16 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="20x20" href="~/images/logo_title.png">
     <!-- Pignose Calender -->
-    <link href="~/plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
+    @* <link href="~/plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet"> *@
     <!-- Chartist -->
     <link rel="stylesheet" href="~/plugins/chartist/css/chartist.min.css">
     <link rel="stylesheet" href="~/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
-    <!-- Custom Stylesheet -->
-    <link href="~/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
 </head>
 <body>
-    <div id="main" class="text-white">
-        <div class="bg-client">
-            <div class="grid wide d-flex justify-content-between  justify-content-center align-items-center h-100">
-                <div class="d-flex">
-                    <div class="logo pr-3">
-                        <a href="#"><img src="~/images/logo_nks.png" alt=""></a>
-                    </div>
-                    <div class="list-menu d-flex ">
-                        <div class="menu-item menu-parents px-1">
-                            <a href="#" class="text-white border py-1 px-2 rounded">
-                                <i class="ti-menu" style="color: #ffffff;"></i>
-                                Danh mục
-                            </a>
-                            <div class="menu-child shadow-lg rounded bg-client ">
-                                <div class="menu-child-category">
-
-                                </div>
-                                <div class="menu-child-brand">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu-item px-1">
-                            <a href="/contact" asp class="text-white border py-1 px-2 rounded">Liên hệ</a>
-                        </div>
-                        <div class="menu-item px-1">
-                            <a href="#" class="text-white border py-1 px-2 rounded">Giới thiệu</a>
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <div class="list-menu d-flex">
-                    <form action="">
-                        <input type="Search" placeholder="Bạn cần tìm gì..." class="rounded border-0 p-1">
-                        <button class="rounded border-0  p-1"><i class="ti-search p-1"></i></button>
-                    </form>
-                </div>
-                <div class="list-menu d-flex">
-                    <div class="menu-item px-2">
-                        <a href="" class="text-white border py-1 px-2 rounded">
-                            <i class="ti-shopping-cart"></i> Giỏ hàng
-                        </a>
-                    </div>
-
-                    <div class="menu-item pl-2">
-                        <a href="" class="text-white border py-1 px-2 rounded fw-bold">
-                            <i class="ti-user"></i> Đăng nhập
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="content">
+    @await Component.InvokeAsync("HeaderClient")
+    <div class="position content-body" style="margin-left: 0; margin-top: 60px;">
         @RenderBody();
     </div>
 
@@ -90,24 +38,6 @@
     <script src="~/js/settings.js"></script>
     <script src="~/js/gleek.js"></script>
     <script src="~/js/styleSwitcher.js"></script>
-
-    <!-- Chartjs -->
-    <script src="~/plugins/chart.js/Chart.bundle.min.js"></script>
-    <!-- Circle progress -->
-    <script src="~/plugins/circle-progress/circle-progress.min.js"></script>
-    <!-- Datamap -->
-    <script src="~/plugins/d3v3/index.js"></script>
-    <script src="~/plugins/topojson/topojson.min.js"></script>
-    @* <script src="~/plugins/datamaps/datamaps.world.min.js"></script> *@
-    <!-- Morrisjs -->
-    <script src="~/plugins/raphael/raphael.min.js"></script>
-    <script src="~/plugins/morris/morris.min.js"></script>
-    <!-- Pignose Calender -->
-    <script src="~/plugins/moment/moment.min.js"></script>
-    <script src="~/plugins/pg-calendar/js/pignose.calendar.min.js"></script>
-    <!-- ChartistJS -->
-    <script src="~/plugins/chartist/js/chartist.min.js"></script>
-    <script src="~/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
 
 </body>
 

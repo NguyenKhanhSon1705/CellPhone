@@ -68,17 +68,7 @@
 }
 
 .form-submit {
-  outline: none;
-  background-color: #1dbfaf;
-  margin-top: 12px;
-  padding: 12px 16px;
-  font-weight: 600;
-  color: #fff;
-  border: none;
-  width: 30%;
-  font-size: 14px;
-  border-radius: 8px;
-  cursor: pointer;
+  
 }
 
 .form-submit:hover {
