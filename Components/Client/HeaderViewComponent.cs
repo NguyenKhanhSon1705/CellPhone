@@ -1,4 +1,3 @@
-
 using Microsoft.AspNetCore.Mvc;
 [ViewComponent(Name = "HeaderClient")]
 public class Header : ViewComponent{

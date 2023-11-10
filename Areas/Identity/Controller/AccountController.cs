@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.WebUtilities;
 [Area("Identity")]
 [Route("/Account/[action]")]
+[Authorize]
 public class AccountController : Controller
 {
     private readonly UserManager<AppUserModel> _userManager;
@@ -23,7 +24,9 @@ public class AccountController : Controller
         _userManager = userManager;
         _logger = logger;
     }
+
     [HttpGet]
+    [AllowAnonymous]
     public IActionResult RegisterConfirmation()
     {
         return View();
@@ -65,10 +68,10 @@ public class AccountController : Controller
                     },
                     protocol: Request.Scheme
                 );
-                await _emailSender.SendEmailAsync(register.Email,
-                "Xác nhận email",
-                @$"Hãy <a href= '{HtmlEncoder.Default.Encode(callbackUrl)}'>bấm vào đây</a> 
-                để xác nhận tài khoản.");
+                // await _emailSender.SendEmailAsync(register.Email,
+                // "Xác nhận email",
+                // @$"Hãy <a href= '{HtmlEncoder.Default.Encode(callbackUrl)}'>bấm vào đây</a> 
+                // để xác nhận tài khoản.");
 
                 if (_userManager.Options.SignIn.RequireConfirmedAccount)
                 {
@@ -80,11 +83,13 @@ public class AccountController : Controller
                     return LocalRedirect(returnUrl);
                 }
             }
-            ModelState.AddModelError("result", "Lỗi");
+            ModelState.AddModelError("result", "Email đã tồn tại");
         }
         return View(register);
     }
 
+    [HttpGet]
+    [AllowAnonymous]
     public async Task<IActionResult> ConfirmEmail(string userId, string code)
     {
         if (userId == null || code == null)
@@ -100,21 +105,69 @@ public class AccountController : Controller
         var result = await _userManager.ConfirmEmailAsync(user, code);
         return View(result.Succeeded ? "ConfirmEmail" : "ErrorConfirmEmail");
     }
+
     [HttpGet("/admin/login")]
-    public IActionResult LoginAdmin(){
-        return View();
-    }
-    [HttpGet]
     [AllowAnonymous]
-    public IActionResult Login(string returnUrl = null)
+    public IActionResult LoginAdmin()
     {
-        // ViewData["ReturnUrl"] = returnUrl;
         return View();
     }
     [HttpPost]
     [AllowAnonymous]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Login(LogInModel login, string returnUrl = null)
+    public async Task<IActionResult> LoginAdmin(LogInModel login, string returnUrl = "/")
+    {
+        if (ModelState.IsValid)
+        {
+            var result = await _signInManager.PasswordSignInAsync(login.Email, login.Password, login.RememberMe, lockoutOnFailure: true);
+            if (!result.Succeeded)
+            {
+                var user = await _userManager.FindByEmailAsync(login.Email);
+                if (user != null)
+                {
+                    result = await _signInManager.PasswordSignInAsync(user.Email, login.Password, login.RememberMe, lockoutOnFailure: true);
+                }
+            }
+            if (result.Succeeded)
+            {
+                var user = await _userManager.FindByEmailAsync(login.Email);
+                var roles = await _userManager.GetRolesAsync(user);
+
+                if (roles.Count == 0)
+                {
+                    // Không có vai trò, hiển thị thông báo 
+                    ModelState.AddModelError("2", "Tài khoản hoặc mật khẩu không đúng");
+
+                    return View(login);
+                }
+                return LocalRedirect(returnUrl);
+            }
+            if (result.IsLockedOut)
+            {
+                return View("Lockout");
+            }
+            else if (!result.Succeeded)
+            {
+                ModelState.AddModelError("2", "Tài khoản hoặc mật khẩu không đúng");
+                return View(login);
+            }
+        }
+        return View(login);
+    }
+
+    [HttpGet]
+    [AllowAnonymous]
+    public IActionResult Login(string returnUrl = "/")
+    {
+        ViewData["ReturnUrl"] = returnUrl;
+        return View();
+    }
+
+
+    [HttpPost]
+    [AllowAnonymous]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Login(LogInModel login, string returnUrl = "/")
     {
         if (ModelState.IsValid)
         {
@@ -146,14 +199,31 @@ public class AccountController : Controller
         }
         return View(login);
     }
+
+
     [HttpPost]
     [ValidateAntiForgeryToken]
+    [AllowAnonymous]
     public async Task<IActionResult> Logout()
     {
         await _signInManager.SignOutAsync();
-        _logger.LogInformation("Logout Successful");
         return RedirectToAction("index", "HOME");
     }
 
-    
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    [AllowAnonymous]
+    public async Task<IActionResult> LogoutAdmin()
+    {
+        await _signInManager.SignOutAsync();
+        return LocalRedirect("/admin/login");
+        // return RedirectToPage("/admin/login");
+    }
+    [Route("/khongduoctruycap.html")]
+    [AllowAnonymous]
+    public IActionResult AccessDenied()
+    {
+        return View();
+    }
 }

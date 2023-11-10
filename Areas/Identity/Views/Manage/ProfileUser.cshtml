@@ -28,6 +28,12 @@
             <span class="form-label">@Html.DisplayNameFor(model => model.Email)</span>
             <span asp-validation-for="Email" class="text-danger"></span>
         </div>
+         <div class="form-field w-50">
+            <input readonly name="creationDate" asp-for="CreationDate"
+                class="form-control form-input border-button-input" placeholder=" " />
+            <span class="form-label">@Html.DisplayNameFor(model => model.CreationDate)</span>
+            <span asp-validation-for="CreationDate" class="text-danger"></span>
+        </div>
         <div class="form-field w-50">
             <input readonly name="phoneNumber" asp-for="PhoneNumber" class="form-control form-input border-button-input"
                 placeholder=" " />
@@ -48,14 +54,6 @@
             <span class="form-label">@Html.DisplayNameFor(model => model.BirthDay)</span>
             <span asp-validation-for="BirthDay" class="text-danger"></span>
         </div>
-
-        <div class="form-field w-50">
-            <input readonly name="creationDate" asp-for="CreationDate"
-                class="form-control form-input border-button-input" placeholder=" " />
-            <span class="form-label">@Html.DisplayNameFor(model => model.CreationDate)</span>
-            <span asp-validation-for="CreationDate" class="text-danger"></span>
-        </div>
-
         <div class="form-field w-50 d-flex justify-content-center ">
             <span>Giới tính: </span>
             <div class="px-3">

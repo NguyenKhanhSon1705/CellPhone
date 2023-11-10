@@ -1,14 +1,17 @@
 import { Pagination, deleteItem, GetList, CreateItem } from "./Ajax/Ajax.js";
 import { toast } from "./loading.js";
 
-
-
-Pagination('/admin/users/indexjson', 1, paging);
 let pageCurrent;
-function paging(data) {
+let totalPage;
+Pagination('/admin/users/indexjson', { CurrentPage: 1 }, paging);
+
+function renderPaging(data, Search = undefined , roles) {
     $('.list').empty()
-    $.each(data.users, (index, user) => {
-        let html = `
+    $('.pagination').empty();
+    if (data.code === 200) {
+        $('.totalUser').html(`Tổng danh sách: ${data.data.total > 0 ? data.data.total : "Không tìm thấy"}`)
+        $.each(data.data.users, (index, user) => {
+            let html = `
                 <tr>
                     <td> ${index}</td>
                     <td>${user.fullName}</td>
@@ -20,7 +23,6 @@ function paging(data) {
                             <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
                             <svg width="20px" height="20px" viewBox="0 0 1024 1024" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M683.505911 480.221671c-123.691491 0-224.309725 100.628474-224.309725 224.309725S559.814421 928.841122 683.505911 928.841122s224.309725-100.628474 224.309726-224.309726-100.618235-224.309725-224.309726-224.309725z m0 405.892716c-100.117555 0-181.584015-81.456221-181.584014-181.584014s81.46646-181.584015 181.584014-181.584015 181.584015 81.456221 181.584015 181.584015S783.622442 886.114387 683.505911 886.114387z" fill="#22C67F" /><path d="M160.117235 843.388676V159.779353c0-11.776729 9.586638-21.362343 21.362343-21.362344h555.433216c11.776729 0 21.362343 9.586638 21.362343 21.362344v256.35324h42.725711V159.779353c0-35.340426-28.747628-64.088054-64.088054-64.088054H181.479578c-35.340426 0-64.088054 28.747628-64.088054 64.088054v683.609323c0 35.340426 28.747628 64.088054 64.088054 64.088055h256.353241v-42.725711H181.479578c-11.776729 0.001024-21.362343-9.585614-21.362343-21.362344z" fill="#22C67F" /><path d="M224.205289 266.593118h491.344137v42.72571H224.205289zM224.205289 480.221671h234.990897v42.725711H224.205289zM224.205289 693.849201h149.539476v42.725711H224.205289zM768.956309 666.478698h-49.23455l42.975539-42.975538c8.344665-8.344665 8.344665-21.863023 0-30.208713s-21.863023-8.344665-30.208713 0l-48.984721 48.983698-48.983698-48.983698c-8.344665-8.344665-21.863023-8.344665-30.208713 0-8.344665 8.344665-8.344665 21.863023 0 30.208713l42.975539 42.975538H598.05449c-11.807446 0-21.362343 9.565137-21.362344 21.362344s9.554898 21.362343 21.362344 21.362343h64.088054v27.371527h-32.044539c-11.808469 0-21.363367 9.565137-21.363367 21.362343s9.554898 21.362343 21.363367 21.362343h32.044539v21.362344c0 11.797207 9.554898 21.362343 21.362343 21.362343 11.808469 0 21.362343-9.565137 21.362344-21.362343v-21.362344h32.044539c11.807446 0 21.362343-9.565137 21.362343-21.362343s-9.554898-21.362343-21.362343-21.362343h-32.044539v-27.371527h64.088054c11.808469 0 21.362343-9.565137 21.362343-21.362343 0.002048-11.797207-9.55285-21.362343-21.361319-21.362344z" fill="#74E8AE" /></svg>
                         </a>
-                        
                         <button title="Xóa" class="buttonDelete p-1 border-0 rounded c-cursor-poiter" data-id="${user.id}">
                             <?xml version="1.0" encoding="utf-8"?>
                             <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
@@ -29,36 +31,36 @@ function paging(data) {
                     </td>
                 </tr>
                 `
-        $('.list').append(html)
-    })
-
-    if (data.countPage !== 1) {
-        $('.pagination').empty();
-        for (let i = 1; i <= data.countPage; i++) {
-            let btn =
-                `
-                <button  class="btn-page px-3 py-1 mx-1 my-3 rounded box-shadow ${i === data.currentPage ? 'active' : ''}" value="${i}">${i}</button>
+            $('.list').append(html)
+        })
+        if (data.data.countPage !== 1) {
+            for (let i = 1; i <= data.data.countPage; i++) {
+                let btn =
+                    `
+                <button  class="btn-page px-3 py-1 mx-1 my-3 rounded box-shadow ${i === data.data.currentPage ? 'active' : ''}" value="${i}">${i}</button>
             `
-            $('.pagination').append(btn)
-        }
-        let btns = document.querySelectorAll('.btn-page');
-        btns.forEach(function (button) {
-            button.addEventListener('click', function () {
-                // Loại bỏ lớp "active" từ tất cả các nút
-                btns.forEach(function (btn) {
-                    btn.classList.remove('active');
+                $('.pagination').append(btn)
+            }
+            let btns = document.querySelectorAll('.btn-page');
+            btns.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    // Loại bỏ lớp "active" từ tất cả các nút
+                    btns.forEach(function (btn) {
+                        btn.classList.remove('active');
+                    });
+                    pageCurrent = button.value
+                    console.log(pageCurrent)
+                    // Thêm lớp "active" cho nút hiện tại
+                    this.classList.add('active');
+                    Pagination('/admin/users/indexjson', { CurrentPage: pageCurrent, email: Search }, Search === undefined ? paging : data => { pagingSearch(data, Search) });
                 });
-
-                // Thêm lớp "active" cho nút hiện tại
-                this.classList.add('active');
-                pageCurrent = button.value
-                Pagination('/admin/users/indexjson', pageCurrent, paging);
             });
-        });
+        }
     }
-
+}
+function paging(data) {
+    renderPaging(data);
 };
-
 $(document).on('click', '.buttonDelete', function () {
     deleteItem('/admin/users/DeleteUser', $(this).data('id'), data => {
         if (data.code === 200) {
@@ -67,16 +69,10 @@ $(document).on('click', '.buttonDelete', function () {
                 message: data.message,
                 type: 'success'
             })
-            Pagination('/admin/users/indexjson', pageCurrent, paging);
+            Pagination('/admin/users/indexjson', { CurrentPage: pageCurrent }, paging);
         }
     })
 })
-
-// function s(){
-//     $('#multiple-role').multipleSelect()
-
-// }
-// s();
 $(document).on('click', '.select-role', function () {
     var idUser = $(this).data('id');
     var nameUser = $(this).data('name');
@@ -94,17 +90,15 @@ $(document).on('click', '.select-role', function () {
             data: options,
             animate: 'slide',
             selectAll: false,
-            
+
         })
-        console.log(listRole)
+        $('#multiple-role').multipleSelect('setSelects', listRole, 'text')
         $(document).on('click', '.preve-close', function () {
             div.remove()
         });
         $(document).on('click', '.c-form', function (e) {
             e.stopPropagation();
         });
-        $('#multiple-role').multipleSelect('setSelects', listRole , 'text')
-
     })
 
     let body = document.querySelector('.content-body');
@@ -132,7 +126,7 @@ $(document).on('click', '.select-role', function () {
                     `
     div.innerHTML = form;
     body.append(div);
-    
+
     $(document).one('click', '.submitRole', function () {
         var ob = {
             id: idUser,
@@ -142,13 +136,32 @@ $(document).on('click', '.select-role', function () {
             console.log("Logkdjlfakjd")
             if (data.code === 200) {
                 Pagination('/admin/users/indexjson', pageCurrent, paging);
-                toast({title:"Thông báo", message: `Cập nhật vai trò thành công`, type:'success' })
+                toast({ title: "Thông báo", message: `Cập nhật vai trò thành công`, type: 'success' })
                 div.remove();
             }
         })
     })
-    
+
 })
 
+function pagingSearch(data, search) {
+    renderPaging(data, search)
+}
+// tìm kiếm user
+$(document).on('click', '.buttonSearch', () => {
+    var inputData = document.querySelector('input[name="search"]').value.trim()
+    if (inputData !== '') {
+        Pagination('/admin/users/indexjson', { CurrentPage: 1, email: inputData }, data => {
+            pagingSearch(data, inputData)
+        });
+    }
+})
+
+// render tất cả user
+$(document).on('click', '.user-all', () => {
+    Pagination('/admin/users/indexjson', { CurrentPage: 1 }, paging);
+})
+
+// render tất cả user có roles
 
 

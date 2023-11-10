@@ -1,20 +1,21 @@
 export function LoadingStart() {
-    let boby = document.body
-    let div = document.createElement('div');
-    div.classList.add('loading');
+    // let boby = document.body
+    // let div = document.createElement('div');
+    let body = document.querySelector('.content-body');
+    let div = document.createElement('div')
+    div.classList.add("confirm")
+    // div.classList.add('loading');
     let html = `
-        <div class="loader">
-            <div class="inner one"></div>
-            <div class="inner two"></div>
-            <div class="inner three"></div>
+        <div class="loader-container">
+        <span class="loader"></span>
         </div>
     `
     div.innerHTML = html;
-    boby.append(div);
+    body.append(div);
 }
 
 export function LoadingStop() {
-    $(".loading").remove()
+    $(".confirm").remove()
 }
 
 

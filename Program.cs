@@ -39,7 +39,7 @@ builder.Services.Configure<IdentityOptions>(options =>
 
     // Lockout settings.
     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(3);
-    options.Lockout.MaxFailedAccessAttempts = 5;
+    options.Lockout.MaxFailedAccessAttempts = 10;
     options.Lockout.AllowedForNewUsers = true;
 
     // User settings.
@@ -57,9 +57,14 @@ builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Account/Login";
     options.LogoutPath = "/Account/Logout";
-    // options.AccessDeniedPath = "/khongduoctruycap.html";
+    options.AccessDeniedPath = "/khongduoctruycap.html";
 });
-
+// builder.Services.ConfigureApplicationCookie(options =>
+// {
+//     options.LoginPath = "/admin/Login";
+//     options.LogoutPath = "/admin/Logout";
+//     options.AccessDeniedPath = "/khongduoctruycap.html";
+// });
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
@@ -81,6 +86,7 @@ app.MapControllers();
 
 app.UseAuthentication(); // xac dinh danh tinh 
 app.UseAuthorization();  // xac thuc  quyen truy  cap
+
 
 // app.MapAreaControllerRoute(
 //     name: "default",

@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 [Area("Identity")]
 [Route("/admin/role/[action]/{id?}")]
+[Authorize(Roles ="Administrator")]
 public class RoleController : Controller
 {
     private readonly ILogger<RoleController> _logger;

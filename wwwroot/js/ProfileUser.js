@@ -24,12 +24,6 @@ EditProfile.addEventListener("click", function () {
     })
     buttonSubmit.classList.remove('d-none')
     button.classList.add('d-none')
-    toast({
-        title: "Thông báo",
-        message: "Bắt đầu cập nhật thông tin",
-        type: 'success',
-        duration: 3000
-    });
 })
 
 function getDate(date) {
@@ -60,10 +54,12 @@ function getProfileUser(data) {
     creationDate.value = getDate(data.data.creationDate)
 
     if (data.data.gender != null) {
-        if (data.data.gender == 'male') {
+        if (data.data.gender == 1) {
             male.checked = true;
-        } else if (data.data.gender == 'female') {
+        } else if (data.data.gender == 0) {
             female.checked = true;
+        }else if(data.data.gender == 2) {
+            notGender.checked =true;
         }
     }
 }
@@ -73,12 +69,10 @@ buttonSubmit.addEventListener('click', function () {
     if (male.checked) {
         gender = 1
     } else if (female.checked) {
-        gender = 0
+        gender = 0 
     }else if(notGender.checked){
         gender = 2
-
     }
-
     var ob = {
         fullname: fullname.value,
         phoneNumber: phoneNumber.value,
@@ -86,7 +80,25 @@ buttonSubmit.addEventListener('click', function () {
         birthDay: birthDay.value,
         gender: gender
     }
-    EditItem('/Manage/EditProfile', ob , (data)=>{})
+    EditItem('/Manage/EditProfile', ob , (data)=>{
+        if(data.code === 200){
+            toast({
+                title: "Thành công",
+                message: "Cập nhật thông tin thành công",
+                type: "success",
+                duration: 3000
+            })
+        }else{
+            data.errors.forEach((error) => {
+                toast({
+                    title: data.message,
+                    message: error,
+                    type: "error",
+                    duration: 3000
+                })
+            })
+        }
+    })
     inputs.forEach((input) => {
         if (!(input.name == 'email' || input.name == 'creationDate')) {
             input.readOnly = true;

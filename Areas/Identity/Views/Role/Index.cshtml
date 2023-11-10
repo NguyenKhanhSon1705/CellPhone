@@ -8,7 +8,17 @@
                         <h4 class="card-title">Danh sách vai trò</h4>
                         <div class="mb-2">
                             <button class="box-shadow button create-role">Tạo role mới</button>
-                            <button class="box-shadow button" asp-action="Index" asp-controller="User">Quản lý thành viên</button>
+                            <a asp-area="Identity" asp-controller="User" asp-action="Index"><svg width="30px"
+                                    height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path d="M7 12L16 12" stroke="#200E32" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path d="M13 16L17 12L13 8" stroke="#200E32" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>Quản lý thành viên</a>
                         </div>
                     </div>
                     <div class="table-responsive">

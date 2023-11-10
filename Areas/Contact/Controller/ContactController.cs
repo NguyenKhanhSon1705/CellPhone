@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 [Area("Contact")]
 [Route("/admin/contact/[action]")]
-[Authorize]
+[Authorize(Roles ="Administrator")]
 public class ContactController : Controller
 {
     private readonly CellPhoneDB _context;
@@ -32,7 +32,12 @@ public class ContactController : Controller
     public async Task<IActionResult> Details(int id)
     {
         try{
+
             var detail = await _context.contacts.Where(i => i.Id == id).FirstOrDefaultAsync();
+            if(detail.Status != 1){
+                detail.Status = 1;
+                await _context.SaveChangesAsync();
+            }
               return Json(new{code = 200 , details = detail , message = "Thành Công"});
             
         }catch (Exception ex){
@@ -67,7 +72,6 @@ public class ContactController : Controller
     {
         return View();
     }
-
     [HttpPost("/contact")]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> SendContact([Bind("FullName,Email,Message,Phone")] ContactModel contact)
@@ -89,7 +93,4 @@ public class ContactController : Controller
     {
         return View();
     }
-
-
-
 }

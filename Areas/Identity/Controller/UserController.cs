@@ -1,8 +1,10 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 [Area("Identity")]
 [Route("/Admin/Users/[action]/{id?}")]
+[Authorize(Roles = "Administrator")]
 public class UserController : Controller
 {
     private readonly ILogger<UserController> _logger;
@@ -27,38 +29,42 @@ public class UserController : Controller
         return View();
     }
     [HttpGet]
-    public async Task<IActionResult> IndexJson(int CurrentPage)
+    public async Task<IActionResult> IndexJson(int CurrentPage, string email = "")
     {
         var model = new UserListModel();
         model.CurrentPage = CurrentPage;
 
-        var qr = _userManager.Users.OrderBy(u => u.FullName);
-
-        model.Total = await qr.CountAsync();
-        model.CountPage = (int)Math.Ceiling((double)model.Total / model.SizePage);
-
-        if (model.CurrentPage < 1)
-            model.CurrentPage = 1;
-        if (model.CurrentPage > model.CountPage)
-            model.CurrentPage = model.CountPage;
-
-        var qr1 = qr.Skip((model.CurrentPage - 1) * model.SizePage)
-                    .Take(model.SizePage)
-                    .Select(u => new UserAndRole()
-                    {
-                        Id = u.Id,
-                        FullName = u.FullName,
-                        Email = u.Email,
-                    });
-
-        model.users = await qr1.ToListAsync();
-
-        foreach (var user in model.users)
+        var qr = _userManager.Users.Where(u => u.Email.Contains(email) || u.FullName.Contains(email)).OrderBy(u => u.FullName);
+        int total = await qr.CountAsync();
+        if (total > 0)
         {
-            var roles = await _userManager.GetRolesAsync(user);
-            user.RoleNames = string.Join(", ", roles);
+            model.Total = total;
+            model.CountPage = (int)Math.Ceiling((double)model.Total / model.SizePage);
+
+            if (model.CurrentPage < 1)
+                model.CurrentPage = 1;
+            if (model.CurrentPage > model.CountPage)
+                model.CurrentPage = model.CountPage;
+
+            var qr1 = qr.Skip((model.CurrentPage - 1) * model.SizePage)
+                        .Take(model.SizePage)
+                        .Select(u => new UserAndRole()
+                        {
+                            Id = u.Id,
+                            FullName = u.FullName,
+                            Email = u.Email,
+                        });
+
+            model.users = await qr1.ToListAsync();
+
+            foreach (var user in model.users)
+            {
+                var roles = await _userManager.GetRolesAsync(user);
+                user.RoleNames = string.Join(", ", roles);
+            }
+            return Json(new { code = 200, data = model, message = "success" });
         }
-        return Json(new { code = 200, data = model, message = "success" });
+        return Json(new { code = 500, message = "not found" });
     }
 
     [HttpGet]
@@ -126,7 +132,7 @@ public class UserController : Controller
             var roleName = await _roleManager.FindByIdAsync(role);
             roleNames.Add(roleName.Name);
         }
-        
+
         if (user != null)
         {
             var roleOld = (await _userManager.GetRolesAsync(user)).ToArray();
@@ -137,11 +143,46 @@ public class UserController : Controller
             var result = await _userManager.AddToRolesAsync(user, roleNames);
             if (result.Succeeded)
             {
-                return Json(new { code = 200, data=roleNames, message = "success" });
+                return Json(new { code = 200, data = roleNames, message = "success" });
             }
         }
-
         return Json(new { code = 500, message = "error" });
-
     }
+
+    [HttpGet]
+    public async Task<IActionResult> FindUsers(int CurrentPage, string email = "")
+    {
+        var model = new UserListModel();
+        model.CurrentPage = CurrentPage;
+
+        var qr = _userManager.Users.Where(u => u.Email.Contains(email)).OrderBy(u => u.FullName);
+
+        model.Total = await qr.CountAsync();
+        model.CountPage = (int)Math.Ceiling((double)model.Total / model.SizePage);
+
+        if (model.CurrentPage < 1)
+            model.CurrentPage = 1;
+        if (model.CurrentPage > model.CountPage)
+            model.CurrentPage = model.CountPage;
+
+        var qr1 = qr.Skip((model.CurrentPage - 1) * model.SizePage)
+                    .Take(model.SizePage)
+                    .Select(u => new UserAndRole()
+                    {
+                        Id = u.Id,
+                        FullName = u.FullName,
+                        Email = u.Email,
+                    });
+
+        model.users = await qr1.ToListAsync();
+
+        foreach (var user in model.users)
+        {
+            var roles = await _userManager.GetRolesAsync(user);
+            user.RoleNames = string.Join(", ", roles);
+        }
+        return Json(new { code = 200, data = model, message = "success" });
+    }
+
+
 }

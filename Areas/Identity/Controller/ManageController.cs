@@ -1,24 +1,23 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Routing;
 
 [Area("Identity")]
 [Route("/Manage/[action]")]
+[Authorize]
 public class ManageController : Controller
 {
     private readonly UserManager<AppUserModel> _userManager;
     private readonly SignInManager<AppUserModel> _signInManager;
-    private readonly IEmailSender _emailSender;
     private readonly ILogger<ManageController> _logger;
 
     public ManageController(UserManager<AppUserModel> userManager,
         SignInManager<AppUserModel> signInManager,
-        IEmailSender emailSender,
         ILogger<ManageController> logger)
     {
         _userManager = userManager;
         _signInManager = signInManager;
-        _emailSender = emailSender;
         _logger = logger;
     }
     public Task<AppUserModel> GetCurrentUserAsync()
@@ -75,32 +74,32 @@ public class ManageController : Controller
         return View();
     }
 
-   [HttpPost]
-[ValidateAntiForgeryToken]
-public async Task<IActionResult> ChangePassword(ChangePasswordModel model)
-{
-    if (!ModelState.IsValid)
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> ChangePassword(ChangePasswordModel model)
     {
-        return View(model);
-    }
-    var user = await GetCurrentUserAsync();
-    if (user != null)
-    {
-        var result = await _userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
-        if (result.Succeeded)
+        if (!ModelState.IsValid)
         {
-            await _signInManager.SignInAsync(user, isPersistent: false);
-            _logger.LogInformation(3, "User changed their password successfully.");
-            return RedirectToAction("ProfileUser");
-        }
-        else
-        {
-            ModelState.AddModelError("OldPasswordError", "Sai mật khẩu cũ");
-            // Thay vì chuyển hướng, quay lại view ChangePassword với thông báo lỗi
             return View(model);
         }
+        var user = await GetCurrentUserAsync();
+        if (user != null)
+        {
+            var result = await _userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
+            if (result.Succeeded)
+            {
+                await _signInManager.SignInAsync(user, isPersistent: false);
+                _logger.LogInformation(3, "User changed their password successfully.");
+                return RedirectToAction("ProfileUser");
+            }
+            else
+            {
+                ModelState.AddModelError("OldPasswordError", "Sai mật khẩu cũ");
+                // Thay vì chuyển hướng, quay lại view ChangePassword với thông báo lỗi
+                return View(model);
+            }
+        }
+        return RedirectToAction("ChangePassword");
     }
-    return RedirectToAction("ChangePassword");
-}
 
 }

@@ -36,10 +36,9 @@ export function DetailsItem(url, id, callback) {
         type: "POST",
         data: object,
         success: function (data) {
-            if (data.code == 200) {
+            if (data.code === 200) {
                 callback(data)
                 LoadingStop();
-                toast({ title: "Thông báo", message: "Xem chi tiết", type: 'success', duration: 5000 });
             }
         },
         error: function (xhr) {
@@ -53,16 +52,15 @@ export function DetailsItem(url, id, callback) {
     });
 }
 
-export function EditItem(url, object, callback, check = true) {
+export function EditItem(url, object, callback) {
     var token = $('input[name="__RequestVerificationToken"]').val();
     object.__RequestVerificationToken = token;
-    if (check) {
-        let body = document.querySelector('.content-body');
-        let div = document.createElement('div');
-        div.classList.add('confirm');
-        $(document).off('click', '.no');
-        $(document).off('click', '.yes');
-        let btn = `
+    let body = document.querySelector('.content-body');
+    let div = document.createElement('div');
+    div.classList.add('confirm');
+    $(document).off('click', '.no');
+    $(document).off('click', '.yes');
+    let btn = `
         <div class="c-transparent-bg preve-close">
                 <div class=" d-flex justify-content-center align-items-center h-100">
                     <div class="animate p-4 bg-white c-boxshow rounded">
@@ -85,47 +83,16 @@ export function EditItem(url, object, callback, check = true) {
                 </div>
             </div>
           `
-        div.innerHTML = btn;
-        body.append(div);
+    div.innerHTML = btn;
+    body.append(div);
 
-        $(document).on('click', '.no', function () {
-            div.remove();
-        });
-        $(document).on('click', '.preve-close', function () {
-        });
-        $(document).on('click', '.yes', function () {
-            LoadingStart();
-            $.ajax({
-                url: url,
-                type: "POST",
-                data: object,
-                success: function (data) {
-                    if (data.code === 200) {
-                        toast({
-                            title: "Thành công",
-                            message: "Cập nhật thông tin thành công",
-                            type: "success",
-                            duration: 3000
-                        })
-                        callback(data)
-                        LoadingStop()
-                    } else {
-                        data.errors.forEach((error) => {
-                            toast({
-                                title: data.message,
-                                message: error,
-                                type: "error",
-                                duration: 3000
-                            })
-                        })
-                        LoadingStop()
-                    }
-                }
-            });
-            div.remove();
-        });
-    }
-    else if (check == false) {
+    $(document).on('click', '.no', function () {
+        div.remove();
+        callback(500)
+    });
+    $(document).on('click', '.preve-close', function () {
+    });
+    $(document).on('click', '.yes', function () {
         LoadingStart();
         $.ajax({
             url: url,
@@ -133,28 +100,16 @@ export function EditItem(url, object, callback, check = true) {
             data: object,
             success: function (data) {
                 if (data.code === 200) {
-                    toast({
-                        title: "Thành công",
-                        message: "Cập nhật thông tin thành công",
-                        type: "success",
-                        duration: 3000
-                    })
                     callback(data)
                     LoadingStop()
                 } else {
-                    data.errors.forEach((error) => {
-                        toast({
-                            title: data.message,
-                            message: error,
-                            type: "error",
-                            duration: 3000
-                        })
-                    })
+                    callback(data)
                     LoadingStop()
                 }
             }
         });
-    }
+        div.remove();
+    });
 }
 
 export function CreateItem(url, object, callback) {
@@ -185,7 +140,6 @@ export function deleteItem(url, id, callback) {
     div.classList.add('confirm');
     $(document).off('click', '.no');
     $(document).off('click', '.yes');
-
     let btn = `
         <div class="c-transparent-bg preve-close">
                 <div class="c-form d-flex justify-content-center align-items-center">
@@ -221,7 +175,7 @@ export function deleteItem(url, id, callback) {
     $(document).on('click', '.c-form', function (e) {
         e.stopPropagation();
     });
-    $(document).on('click', '.yes', function () {
+    function excute(){
         LoadingStart()
         $.ajax({
             url: url,
@@ -243,19 +197,25 @@ export function deleteItem(url, id, callback) {
             }
         });
         div.remove();
+    }
+    $(document).on('click', '.yes', function () {
+        excute()
     });
 }
 
 
-export function Pagination(url, CurrentPage = 1, callback) {
+export function Pagination(url, object, callback) {
     LoadingStart();
     $.ajax({
         url: url,
         type: 'GET',
-        data: { CurrentPage: CurrentPage },
+        data: object,
         success: function (data) {
             if (data.code === 200) {
-                callback(data.data)
+                callback(data)
+                LoadingStop();
+            }else{
+                callback(data)
                 LoadingStop();
             }
         }
