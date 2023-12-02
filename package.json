@@ -18,6 +18,7 @@
   "homepage": "https://github.com/NguyenKhanhSon1705/CellPhone#readme",
   "dependencies": {
     "axios": "^1.6.0",
+    "bootstrap": "^5.3.2",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",

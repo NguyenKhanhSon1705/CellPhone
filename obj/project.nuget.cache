@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "O0IPJxBlkPdg8F+WTOUlMrslc7uXOGMCisiM+hAMRfNElt4QdMODntUzFl25z+WUYsmVIvMd7VfAqqXUDvlOqg==",
+  "dgSpecHash": "mOJAEpy8TtasJjTWPNwlSVyaAgfyXLNBdk73DKnmMIwLR/kLSf7WFXJ/i93CXvI3DvpX9cRO9YU6GUUsYi3cEg==",
   "success": true,
   "projectFilePath": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\CellPhone.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\My Pc\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
+    "C:\\Users\\My Pc\\.nuget\\packages\\elfinder.netcore\\1.3.6\\elfinder.netcore.1.3.6.nupkg.sha512",
     "C:\\Users\\My Pc\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\My Pc\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\My Pc\\.nuget\\packages\\k4os.compression.lz4\\1.3.5\\k4os.compression.lz4.1.3.5.nupkg.sha512",

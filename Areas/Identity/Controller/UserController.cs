@@ -4,20 +4,18 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 [Area("Identity")]
 [Route("/Admin/Users/[action]/{id?}")]
-[Authorize(Roles = "Administrator")]
+[Authorize(Roles = "Admin, Administrator")]
 public class UserController : Controller
 {
-    private readonly ILogger<UserController> _logger;
     private readonly RoleManager<IdentityRole> _roleManager;
     private readonly CellPhoneDB _cellPhoneDB;
     private readonly UserManager<AppUserModel> _userManager;
 
-    public UserController(ILogger<UserController> logger,
+    public UserController(
     RoleManager<IdentityRole> roleManager,
      CellPhoneDB context,
      UserManager<AppUserModel> userManager)
     {
-        _logger = logger;
         _roleManager = roleManager;
         _cellPhoneDB = context;
         _userManager = userManager;
@@ -67,6 +65,7 @@ public class UserController : Controller
         return Json(new { code = 500, message = "not found" });
     }
 
+    [Authorize(Roles ="Administrator,CanView")]
     [HttpGet]
     public async Task<IActionResult> Details(string? id)
     {
@@ -83,6 +82,7 @@ public class UserController : Controller
         return RedirectToAction("Index");
     }
 
+    [Authorize(Roles ="Administrator , CanDelete")]
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> DeleteUser(string? id)
@@ -95,32 +95,14 @@ public class UserController : Controller
 
         return Json(new { code = 500, message = "user is not found" });
     }
-    private async Task GetClaims(AddUserRoleModel model)
-    {
-        var listRoles = from r in _cellPhoneDB.Roles
-                        join ur in _cellPhoneDB.UserRoles on r.Id equals ur.RoleId
-                        where ur.UserId == model.user.Id
-                        select r;
-
-        var _claimsInRole = from c in _cellPhoneDB.RoleClaims
-                            join r in listRoles on c.RoleId equals r.Id
-                            select c;
-
-        model.claimsInRole = await _claimsInRole.ToListAsync();
-
-
-        model.claimsInUserClaim = await (from c in _cellPhoneDB.UserClaims
-                                         where c.UserId == model.user.Id
-                                         select c).ToListAsync();
-
-    }
-
+   
     [HttpGet]
     public async Task<IActionResult> ListRoleJson()
     {
         var role = await _roleManager.Roles.ToListAsync();
         return Json(new { code = 200, data = role });
     }
+    [Authorize(Roles ="Administrator , CanAdd")]
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> AddRoleUser(string id, List<string> roles)
@@ -183,6 +165,5 @@ public class UserController : Controller
         }
         return Json(new { code = 200, data = model, message = "success" });
     }
-
 
 }

@@ -3,6 +3,7 @@ using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using System;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -59,6 +60,8 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.LogoutPath = "/Account/Logout";
     options.AccessDeniedPath = "/khongduoctruycap.html";
 });
+
+
 // builder.Services.ConfigureApplicationCookie(options =>
 // {
 //     options.LoginPath = "/admin/Login";
@@ -80,11 +83,18 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions() {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(), "Uploads")
+                ),
+                RequestPath = "/contents"
+            });
 
 app.UseRouting();
 app.MapControllers();
 
 app.UseAuthentication(); // xac dinh danh tinh 
+
 app.UseAuthorization();  // xac thuc  quyen truy  cap
 
 

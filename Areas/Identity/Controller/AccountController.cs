@@ -112,6 +112,7 @@ public class AccountController : Controller
     {
         return View();
     }
+
     [HttpPost]
     [AllowAnonymous]
     [ValidateAntiForgeryToken]
@@ -119,25 +120,26 @@ public class AccountController : Controller
     {
         if (ModelState.IsValid)
         {
+            
             var result = await _signInManager.PasswordSignInAsync(login.Email, login.Password, login.RememberMe, lockoutOnFailure: true);
             if (!result.Succeeded)
             {
                 var user = await _userManager.FindByEmailAsync(login.Email);
                 if (user != null)
                 {
-                    result = await _signInManager.PasswordSignInAsync(user.Email, login.Password, login.RememberMe, lockoutOnFailure: true);
+                    result = await _signInManager.PasswordSignInAsync(user.UserName, login.Password, login.RememberMe, lockoutOnFailure: true);
                 }
             }
             if (result.Succeeded)
             {
                 var user = await _userManager.FindByEmailAsync(login.Email);
+                if(user == null) user = await _userManager.FindByNameAsync(login.Email);
+                
                 var roles = await _userManager.GetRolesAsync(user);
-
                 if (roles.Count == 0)
                 {
                     // Không có vai trò, hiển thị thông báo 
                     ModelState.AddModelError("2", "Tài khoản hoặc mật khẩu không đúng");
-
                     return View(login);
                 }
                 return LocalRedirect(returnUrl);

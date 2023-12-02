@@ -22,8 +22,21 @@ public class CellPhoneDB : IdentityDbContext<AppUserModel>
                 entityType.SetTableName(tableName.Substring(6));
             }
         }
+        builder.Entity<CategoryModel>(entity=>{
+            entity.HasIndex(c=> c.Slug).IsUnique();
+        });
+        builder.Entity<PostModel>(entity=>{
+            entity.HasIndex(c=> c.Slug).IsUnique();
+        });
+         builder.Entity<PostCategoryModel>( entity => {
+                entity.HasKey( c => new {c.PostID, c.CategoryID});
+            });
     }
     public DbSet<ContactModel> contacts { get; set; }
     // public DbSet<MenuAdminModel> menuAdmin {get; set;}
+    public DbSet<CategoryModel> categories {get;set;}
+
+    public DbSet<PostModel> posts {get; set;}
+    public DbSet<PostCategoryModel> postCategories {get;set;}
 
 }

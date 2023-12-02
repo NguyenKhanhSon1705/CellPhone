@@ -1,7 +1,7 @@
-import { LoadingStart, LoadingStop, toast } from '../loading.js'
+import {  LoadingStatus, toast } from '../effects.js'
 
 export function GetList(url, callback) {
-    LoadingStart();
+    LoadingStatus(true);
     $.ajax({
         url: url,
         type: "Get",
@@ -9,7 +9,7 @@ export function GetList(url, callback) {
         success: function (data) {
             if (data.code == 200) {
                 callback(data)
-                LoadingStop();
+                LoadingStatus(false);
             }
         },
         error: function (xhr) {
@@ -30,7 +30,7 @@ export function DetailsItem(url, id, callback) {
         'id': id,
         '__RequestVerificationToken': token
     }
-    LoadingStart();
+    LoadingStatus(true);
     $.ajax({
         url: url,
         type: "POST",
@@ -38,7 +38,7 @@ export function DetailsItem(url, id, callback) {
         success: function (data) {
             if (data.code === 200) {
                 callback(data)
-                LoadingStop();
+                LoadingStatus(false);
             }
         },
         error: function (xhr) {
@@ -93,7 +93,7 @@ export function EditItem(url, object, callback) {
     $(document).on('click', '.preve-close', function () {
     });
     $(document).on('click', '.yes', function () {
-        LoadingStart();
+        LoadingStatus(true);
         $.ajax({
             url: url,
             type: "POST",
@@ -101,10 +101,10 @@ export function EditItem(url, object, callback) {
             success: function (data) {
                 if (data.code === 200) {
                     callback(data)
-                    LoadingStop()
+                    LoadingStatus(false)
                 } else {
                     callback(data)
-                    LoadingStop()
+                    LoadingStatus(false)
                 }
             }
         });
@@ -113,7 +113,7 @@ export function EditItem(url, object, callback) {
 }
 
 export function CreateItem(url, object, callback) {
-    LoadingStart()
+    LoadingStatus(true)
     var token = $('input[name="__RequestVerificationToken"]').val();
     object.__RequestVerificationToken = token
     $.ajax({
@@ -121,9 +121,9 @@ export function CreateItem(url, object, callback) {
         type: "POST",
         data: object,
         success: function (data) {
-            if (data.code == 200) {
+            if (data.code === 200) {
                 callback(data)
-                LoadingStop()
+                LoadingStatus(false)
             }
         }
     });
@@ -176,7 +176,7 @@ export function deleteItem(url, id, callback) {
         e.stopPropagation();
     });
     function excute(){
-        LoadingStart()
+        LoadingStatus(true);true
         $.ajax({
             url: url,
             type: "POST",
@@ -184,7 +184,7 @@ export function deleteItem(url, id, callback) {
             success: function (data) {
                 if (data.code === 200) {
                     callback(data)
-                    LoadingStop()
+                    LoadingStatus(false)
                 }
             },
             error: function (xhr) {
@@ -201,11 +201,15 @@ export function deleteItem(url, id, callback) {
     $(document).on('click', '.yes', function () {
         excute()
     });
+    $(document).on('keydown', function (event) {
+        if (event.which === 13) {  // Kiểm tra xem phím nhấn có phải là Enter không (mã phím 13)
+          excute();
+        }
+      }); 
 }
 
-
 export function Pagination(url, object, callback) {
-    LoadingStart();
+    LoadingStatus(true);
     $.ajax({
         url: url,
         type: 'GET',
@@ -213,10 +217,10 @@ export function Pagination(url, object, callback) {
         success: function (data) {
             if (data.code === 200) {
                 callback(data)
-                LoadingStop();
+                LoadingStatus(false);
             }else{
                 callback(data)
-                LoadingStop();
+                LoadingStatus(false);
             }
         }
     });

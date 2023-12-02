@@ -1,5 +1,5 @@
 import { GetList, EditItem } from "./Ajax/Ajax.js";
-import { toast } from "./loading.js";
+import { toast } from "./effects.js";
 
 var fullname = document.querySelector('input[name="fullname"]')
 var email = document.querySelector('input[name="email"]')

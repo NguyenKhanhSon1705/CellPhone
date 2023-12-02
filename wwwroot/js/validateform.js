@@ -1,4 +1,3 @@
-import { LoadingStart, LoadingStop, toast } from './loading.js'
 
 export function Validate(form , callback){
 
@@ -97,13 +96,9 @@ export function Validate(form , callback){
             });
             if(checkSubmit){
                 callback(account)
-                inputs.forEach(element => {
-                    // element.value = ''
-                });
-            }
-            else
-            {
-                toast({title:'Thông báo'  , message: 'thất bại' , type:'error' })
+                // inputs.forEach(element => {
+                //     element.value = ''
+                // });
             }
         }
     }

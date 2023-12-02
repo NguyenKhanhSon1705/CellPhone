@@ -3,14 +3,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 [Area("Contact")]
 [Route("/admin/contact/[action]")]
-[Authorize(Roles ="Administrator")]
+[Authorize(Roles = "Administrator")]
 public class ContactController : Controller
 {
     private readonly CellPhoneDB _context;
     private IEmailSender _emailSender;
-    [TempData]
-    public string StatusMessage { get; set; }
-    public ContactController(CellPhoneDB context , IEmailSender sendmail)
+    public ContactController(CellPhoneDB context, IEmailSender sendmail)
     {
         _context = context;
         _emailSender = sendmail;
@@ -24,24 +22,31 @@ public class ContactController : Controller
     public JsonResult IndexJson()
     {
         var ListContact = _context.contacts.ToList();
-        return Json(new {code = 200 , list = ListContact, message = "Success"});
+        return Json(new { code = 200, list = ListContact, message = "Success" });
     }
 
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Details(int id)
     {
-        try{
+        try
+        {
 
             var detail = await _context.contacts.Where(i => i.Id == id).FirstOrDefaultAsync();
-            if(detail.Status != 1){
-                detail.Status = 1;
-                await _context.SaveChangesAsync();
+            if (detail != null)
+            {
+                if (detail.Status != 1)
+                {
+                    detail.Status = 1;
+                    await _context.SaveChangesAsync();
+                }
             }
-              return Json(new{code = 200 , details = detail , message = "Thành Công"});
-            
-        }catch (Exception ex){
-              return Json(new{code = 200 , message = ex.Message});
+            return Json(new { code = 200, details = detail, message = "Thành Công" });
+
+        }
+        catch (Exception ex)
+        {
+            return Json(new { code = 200, message = ex.Message });
 
         }
     }
@@ -49,26 +54,24 @@ public class ContactController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Delete(int id)
     {
-        try
+        var contact = await _context.contacts.FindAsync(id);
+        if (contact != null)
         {
-            var contact = await _context.contacts.FindAsync(id);
             _context.contacts.Remove(contact);
             await _context.SaveChangesAsync();
 
             return Json(new { code = 200, message = "thành công" });
         }
-        catch (Exception ex)
+
+        return Json(new
         {
-            return Json(new
-            {
-                code = 500,
-                message = "Xóa không thành công"
-            });
-        }
+            code = 500, message = "Loi"
+        });
+
     }
 
     [HttpGet("/contact")]
-    public  IActionResult SendContact()
+    public IActionResult SendContact()
     {
         return View();
     }
@@ -83,7 +86,6 @@ public class ContactController : Controller
             _context.Add(contact);
             await _context.SaveChangesAsync();
             // await _emailSender.SendEmailAsync("nguyenkhanhsonzero@gmail.com", "Liên hệ", contact.Message);
-            StatusMessage = "Liên hệ của bạn đã được gửi";
             return RedirectToAction("Thanks");
         }
         return View(contact);

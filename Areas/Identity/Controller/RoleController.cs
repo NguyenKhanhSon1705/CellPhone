@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 [Area("Identity")]
 [Route("/admin/role/[action]/{id?}")]
-[Authorize(Roles ="Administrator")]
+[Authorize(Roles = "Administrator")]
 public class RoleController : Controller
 {
     private readonly ILogger<RoleController> _logger;
@@ -100,28 +100,28 @@ public class RoleController : Controller
         {
             return Json(new { code = 200, message = "success" });
         }
-        var listError =  result.Errors.Select(error => error.Description).ToList();
-        return Json(new {code =500 , message = "error" , errors = listError  });
+        var listError = result.Errors.Select(error => error.Description).ToList();
+        return Json(new { code = 500, message = "error", errors = listError });
     }
 
-    [HttpGet]        
-        public async Task<IActionResult> AddRoleClaimAsync(string roleid)
+    [HttpGet]
+    public async Task<IActionResult> AddRoleClaimAsync(string roleid)
+    {
+        if (roleid == null) return NotFound("Không tìm thấy role");
+        var role = await _roleManager.FindByIdAsync(roleid);
+        if (role == null)
         {
-            if (roleid == null) return NotFound("Không tìm thấy role");
-            var role = await _roleManager.FindByIdAsync(roleid);
-            if (role == null)
-            {
-                return NotFound("Không tìm thấy role");
-            } 
-
-            var model = new EditClaimModel()
-            {
-                role = role
-            };
-            return View(model);
+            return NotFound("Không tìm thấy role");
         }
-  /*  public async Task<IActionResult> CreateClaims(){
 
-        return Json(new {code= 200});
-    }*/
+        var model = new EditClaimModel()
+        {
+            role = role
+        };
+        return View(model);
+    }
+    /*  public async Task<IActionResult> CreateClaims(){
+
+          return Json(new {code= 200});
+      }*/
 }

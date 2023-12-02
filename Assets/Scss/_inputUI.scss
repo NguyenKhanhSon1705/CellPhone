@@ -38,3 +38,32 @@
         border: 2px solid #aaa9a9;
     }
 }
+
+// check box
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+  }
+  
+  .custom-checkbox input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3498db; /* Màu viền của checkbox */
+    border-radius: 4px; /* Độ cong của viền checkbox */
+    outline: none;
+    cursor: pointer;
+    margin-right: 8px;
+  }
+  
+  .custom-checkbox input:checked {
+    background-color: #3498db; /* Màu nền khi checkbox được chọn */
+  }
+  
+  .custom-checkbox label {
+    cursor: pointer;
+  }
+  

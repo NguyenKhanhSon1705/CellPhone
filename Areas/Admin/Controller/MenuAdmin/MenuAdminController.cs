@@ -5,11 +5,11 @@ using Microsoft.AspNetCore.Mvc;
 // /menumanage/index
 public class MenuAdminController : Controller
 {
-    private readonly CellPhoneDB _menuadmin;
-    public MenuAdminController(CellPhoneDB menuAdmin)
-    {
-        _menuadmin = menuAdmin;
-    }
+    // private readonly CellPhoneDB _menuadmin;
+    // public MenuAdminController(CellPhoneDB menuAdmin)
+    // {
+    //     // _menuadmin = menuAdmin;
+    // }
 
     [HttpGet]
     public IActionResult Index()
@@ -19,7 +19,7 @@ public class MenuAdminController : Controller
     }
     
     [BindProperty]
-    public MenuAdminModel menuAdmin { get; set; }
+    public MenuAdminModel? menuAdmin { get; set; }
 
     /*[HttpGet]
     public async Task<IActionResult> Create()
