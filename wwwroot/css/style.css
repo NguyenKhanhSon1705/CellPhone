@@ -7588,7 +7588,7 @@ sub {
 
 .nav-header {
   height: 5rem;
-  width: 12.1875rem;
+  width: 11.1875rem;
   display: inline-block;
   text-align: left;
   position: absolute;
@@ -7603,7 +7603,7 @@ sub {
     display: none; }
   @media only screen and (min-width: 1200px) and (max-width: 1350px) {
     .nav-header {
-      width: 14.375rem; } }
+      width: 11.1875rem; } }
   .nav-header .brand-logo {
     z-index: 999; }
     .nav-header .brand-logo a {
@@ -7681,11 +7681,10 @@ sub {
 
 .header {
   height: 5rem;
-  z-index: 1;
   position: relative;
   padding: 0 0.9375rem;
   background: #07B5B8;
-  margin-left: 12.1875rem;
+  margin-left: 11.1875rem;
   transition: all .2s ease; }
   .header .header-content {
     height: 100%; }
@@ -7706,11 +7705,11 @@ sub {
       margin-left: 0; } }
 
 [data-sidebar-style="full"] .header, [data-sidebar-style="overlay"] .header {
-  width: calc(100% - 12.1875rem); }
+  width: calc(100% - 11.1875rem); }
   @media only screen and (min-width: 1200px) and (max-width: 1350px) {
     [data-sidebar-style="full"] .header, [data-sidebar-style="overlay"] .header {
-      width: calc(100% - 14.375rem);
-      margin-left: 14.375rem; } }
+      width: calc(100% - 11.1875rem);
+      margin-left: 11.1875rem; } }
   @media only screen and (max-width: 767px) {
     [data-sidebar-style="full"] .header, [data-sidebar-style="overlay"] .header {
       width: calc(100% - 3.75rem);
@@ -8137,26 +8136,26 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   top: 0.625rem; }
 
 .content-body {
-  margin-left: 12.1875rem;
+  position: relative;
+  margin-left: 11.1875rem;
   z-index: 0; }
   @media only screen and (min-width: 1200px) and (max-width: 1350px) {
     .content-body {
-      margin-left: 14.375rem; } }
+      margin-left: 11.1875rem; } }
 
 
 .nk-sidebar {
-  width: 12.1875rem;
+  width: 11.1875rem;
   padding-bottom: 112px;
   height: 100%;
   position: absolute;
   top: 5rem;
   padding-top: 0;
-  z-index: 99;
   background: #fff;
   transition: all .2s ease; }
   @media only screen and (min-width: 1200px) and (max-width: 1350px) {
     .nk-sidebar {
-      width: 14.375rem; } }
+      width: 11.1875rem; } }
   .nk-sidebar ul {
     padding: 0;
     margin: 0;
@@ -8693,7 +8692,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-layout="horizontal"] .header {
     width: calc(100% - 9.0625rem);
     margin-left: 9.0625rem;
-    z-index: 9; }
+    z-index: 5; }
     [data-layout="horizontal"] .header .header-left {
       margin-left: 0; }
   [data-layout="horizontal"] .nk-sidebar {
@@ -8967,7 +8966,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     margin-left: 0;
     max-width: 1199px;
     margin: 0 auto; }
-  [data-layout="horizontal"][data-container="wide"] .page-titles {
+  [data-layout="horizontal"][data-container="wide.header"] .page-titles {
     margin-left: -30px;
     margin-right: -30px; }
   [data-layout="horizontal"][data-sidebar-style="compact"] .page-titles {

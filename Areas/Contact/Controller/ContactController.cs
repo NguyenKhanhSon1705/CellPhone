@@ -1,75 +1,82 @@
-
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
 [Area("Contact")]
 [Route("/admin/contact/[action]")]
-// /Contact/Contact/Index
+[Authorize(Roles = "Administrator")]
 public class ContactController : Controller
 {
     private readonly CellPhoneDB _context;
     private IEmailSender _emailSender;
-    [TempData]
-    public string StatusMessage { get; set; }
-    public ContactController(CellPhoneDB context , IEmailSender sendmail)
+    public ContactController(CellPhoneDB context, IEmailSender sendmail)
     {
         _context = context;
         _emailSender = sendmail;
     }
     [HttpGet]
-    public async Task<IActionResult> Index()
+    public IActionResult Index()
     {
         return View();
-        // return Json(new {code = 200 , list = ListContact, message = "Success"});
     }
     [HttpGet]
-    public JsonResult ViewContact()
+    public JsonResult IndexJson()
     {
         var ListContact = _context.contacts.ToList();
-        // return View();
-        return Json(new {code = 200 , list = ListContact, message = "Success"});
+        return Json(new { code = 200, list = ListContact, message = "Success" });
     }
 
-    [HttpPost()]
+    [HttpPost]
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> Details(int id)
-    {
-        try{
-            var detail = await _context.contacts.Where(i => i.Id == id).FirstOrDefaultAsync();
-              return Json(new{code = 200 , details = detail , message = "Thành Công"});
-            
-        }catch (Exception ex){
-              return Json(new{code = 200 , message = ex.Message});
-
-        }
-    }
-
-    [HttpPost()]
-    public async Task<IActionResult> Delete(int id)
     {
         try
         {
-            var contact = await _context.contacts.FindAsync(id);
+
+            var detail = await _context.contacts.Where(i => i.Id == id).FirstOrDefaultAsync();
+            if (detail != null)
+            {
+                if (detail.Status != 1)
+                {
+                    detail.Status = 1;
+                    await _context.SaveChangesAsync();
+                }
+            }
+            return Json(new { code = 200, details = detail, message = "Thành Công" });
+
+        }
+        catch (Exception ex)
+        {
+            return Json(new { code = 200, message = ex.Message });
+
+        }
+    }
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var contact = await _context.contacts.FindAsync(id);
+        if (contact != null)
+        {
             _context.contacts.Remove(contact);
             await _context.SaveChangesAsync();
 
             return Json(new { code = 200, message = "thành công" });
         }
-        catch (Exception ex)
+
+        return Json(new
         {
-            return Json(new
-            {
-                code = 500,
-                message = "Xóa không thành công"
-            });
-        }
+            code = 500, message = "Loi"
+        });
+
     }
 
     [HttpGet("/contact")]
-    public  IActionResult SendContact()
+    public IActionResult SendContact()
     {
         return View();
     }
-
     [HttpPost("/contact")]
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> SendContact([Bind("FullName,Email,Message,Phone")] ContactModel contact)
     {
         if (ModelState.IsValid)
@@ -79,7 +86,6 @@ public class ContactController : Controller
             _context.Add(contact);
             await _context.SaveChangesAsync();
             // await _emailSender.SendEmailAsync("nguyenkhanhsonzero@gmail.com", "Liên hệ", contact.Message);
-            StatusMessage = "Liên hệ của bạn đã được gửi";
             return RedirectToAction("Thanks");
         }
         return View(contact);
@@ -89,7 +95,4 @@ public class ContactController : Controller
     {
         return View();
     }
-
-
-
 }

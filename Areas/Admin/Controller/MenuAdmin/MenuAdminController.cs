@@ -5,27 +5,27 @@ using Microsoft.AspNetCore.Mvc;
 // /menumanage/index
 public class MenuAdminController : Controller
 {
-    private readonly CellPhoneDB _menuadmin;
-    public MenuAdminController(CellPhoneDB menuAdmin)
-    {
-        _menuadmin = menuAdmin;
-    }
+    // private readonly CellPhoneDB _menuadmin;
+    // public MenuAdminController(CellPhoneDB menuAdmin)
+    // {
+    //     // _menuadmin = menuAdmin;
+    // }
 
     [HttpGet]
-    public async Task<IActionResult> Index()
+    public IActionResult Index()
     {
         
         return View();
     }
     
     [BindProperty]
-    public MenuAdminModel menuAdmin { get; set; }
+    public MenuAdminModel? menuAdmin { get; set; }
 
-    [HttpGet]
+    /*[HttpGet]
     public async Task<IActionResult> Create()
     {
     //    await _mailService.SendEmailAsync("nks5k3@gmail.com" , "Notications","Tôi đã gửi thành công email rồi kakaan");
         
         return View();
-    }
+    }*/
 }
