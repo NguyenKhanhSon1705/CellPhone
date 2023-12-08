@@ -107,7 +107,6 @@ namespace CellPhone.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<int?>("ParentCategoryId")
@@ -127,9 +126,43 @@ namespace CellPhone.Migrations
 
                     b.HasIndex("ParentCategoryId");
 
-                    b.HasIndex("Slug");
+                    b.HasIndex("Slug")
+                        .IsUnique();
 
                     b.ToTable("Category", (string)null);
+                });
+
+            modelBuilder.Entity("CategoryProductModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int?>("ParentCategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Slugc")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ParentCategoryId");
+
+                    b.HasIndex("Slugc")
+                        .IsUnique();
+
+                    b.ToTable("CategoryProduct", (string)null);
                 });
 
             modelBuilder.Entity("ContactModel", b =>
@@ -295,9 +328,216 @@ namespace CellPhone.Migrations
                     b.ToTable("UserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("PostCategoryModel", b =>
+                {
+                    b.Property<int>("PostID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CategoryID")
+                        .HasColumnType("int");
+
+                    b.HasKey("PostID", "CategoryID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.ToTable("PostCategory", (string)null);
+                });
+
+            modelBuilder.Entity("PostModel", b =>
+                {
+                    b.Property<int>("PostID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("AbstractTitle")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("AuthorId")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("DateUpdated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Slug")
+                        .HasMaxLength(160)
+                        .HasColumnType("varchar(160)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("ViewCount")
+                        .HasColumnType("int");
+
+                    b.HasKey("PostID");
+
+                    b.HasIndex("AuthorId");
+
+                    b.HasIndex("Slug")
+                        .IsUnique();
+
+                    b.ToTable("posts", (string)null);
+                });
+
+            modelBuilder.Entity("ProductCategoryProductModel", b =>
+                {
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CategoryID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProductID", "CategoryID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.ToTable("ProductCategoryProduct", (string)null);
+                });
+
+            modelBuilder.Entity("ProductDetailModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Bettery")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Camera")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Discription")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Ram")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Rom")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Screen")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Security")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Warranty")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductID");
+
+                    b.ToTable("productDetail", (string)null);
+                });
+
+            modelBuilder.Entity("ProductImageModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductID");
+
+                    b.ToTable("ProductImages", (string)null);
+                });
+
+            modelBuilder.Entity("ProductModel", b =>
+                {
+                    b.Property<int>("ProductID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("AuthorId")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("DateUpdated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("Inventory")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Promotion")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Published")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Slugp")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(160)
+                        .HasColumnType("varchar(160)");
+
+                    b.HasKey("ProductID");
+
+                    b.HasIndex("AuthorId");
+
+                    b.HasIndex("Slugp")
+                        .IsUnique();
+
+                    b.ToTable("Product", (string)null);
+                });
+
             modelBuilder.Entity("CategoryModel", b =>
                 {
                     b.HasOne("CategoryModel", "ParentCategory")
+                        .WithMany("CategoryChildren")
+                        .HasForeignKey("ParentCategoryId");
+
+                    b.Navigation("ParentCategory");
+                });
+
+            modelBuilder.Entity("CategoryProductModel", b =>
+                {
+                    b.HasOne("CategoryProductModel", "ParentCategory")
                         .WithMany("CategoryChildren")
                         .HasForeignKey("ParentCategoryId");
 
@@ -355,9 +595,110 @@ namespace CellPhone.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("PostCategoryModel", b =>
+                {
+                    b.HasOne("CategoryModel", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PostModel", "Post")
+                        .WithMany("PostCategories")
+                        .HasForeignKey("PostID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Post");
+                });
+
+            modelBuilder.Entity("PostModel", b =>
+                {
+                    b.HasOne("AppUserModel", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+                });
+
+            modelBuilder.Entity("ProductCategoryProductModel", b =>
+                {
+                    b.HasOne("CategoryProductModel", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProductModel", "Product")
+                        .WithMany("ProductCategoryProducts")
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("ProductDetailModel", b =>
+                {
+                    b.HasOne("ProductModel", "Product")
+                        .WithMany("ProductDetai")
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("ProductImageModel", b =>
+                {
+                    b.HasOne("ProductModel", "Product")
+                        .WithMany("ListImage")
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("ProductModel", b =>
+                {
+                    b.HasOne("AppUserModel", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+                });
+
             modelBuilder.Entity("CategoryModel", b =>
                 {
                     b.Navigation("CategoryChildren");
+                });
+
+            modelBuilder.Entity("CategoryProductModel", b =>
+                {
+                    b.Navigation("CategoryChildren");
+                });
+
+            modelBuilder.Entity("PostModel", b =>
+                {
+                    b.Navigation("PostCategories");
+                });
+
+            modelBuilder.Entity("ProductModel", b =>
+                {
+                    b.Navigation("ListImage");
+
+                    b.Navigation("ProductCategoryProducts");
+
+                    b.Navigation("ProductDetai");
                 });
 #pragma warning restore 612, 618
         }

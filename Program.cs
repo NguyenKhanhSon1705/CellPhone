@@ -12,7 +12,7 @@ builder.Services.AddOptions();
 var maisetting = builder.Configuration.GetSection("MailSettings");
 builder.Services.Configure<MailSettings>(maisetting);
 builder.Services.AddSingleton<IEmailSender, SendMailService>();
-
+builder.Services.AddTransient<CartService>();
 
 // Add services to the container.
 builder.Services.AddDbContext<CellPhoneDB>(options =>
@@ -61,6 +61,11 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.AccessDeniedPath = "/khongduoctruycap.html";
 });
 
+builder.Services.AddDistributedMemoryCache();           // Đăng ký dịch vụ lưu cache trong bộ nhớ (Session sẽ sử dụng nó)
+builder.Services.AddSession(cfg => {                    // Đăng ký dịch vụ Session
+    cfg.Cookie.Name = "NKS";             // Đặt tên Session - tên này sử dụng ở Browser (Cookie)
+    cfg.IdleTimeout = new TimeSpan(0,30, 0);    // Thời gian tồn tại của Session
+});
 
 // builder.Services.ConfigureApplicationCookie(options =>
 // {
@@ -89,7 +94,7 @@ app.UseStaticFiles(new StaticFileOptions() {
                 ),
                 RequestPath = "/contents"
             });
-
+app.UseSession();
 app.UseRouting();
 app.MapControllers();
 

@@ -1,0 +1,97 @@
+@Html.AntiForgeryToken()
+<link rel="stylesheet" href="~/css/grid.css">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3 w-100">
+                        <div class="d-flex align-items-center w-50">
+                            <div class="form-field w-50 ">
+                                <input type="search" name="search" class="form-control form-input w-100"
+                                    placeholder=" " />
+                                <span class="form-label">Tìm kiếm</span>
+                            </div>
+                            <button class=" box-shadow active px-2 py-1 rounded "><svg width="20px" height="20px"
+                                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+                                            stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </g>
+                                </svg></button>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <a asp-action="create" asp-controller="products" asp-area="products" class="create-post box-shadow button text-white">Thêm sản phẩm mới</a>
+                            <div>
+                                <a asp-action="index" asp-controller="CategoryProduct" asp-area="products"><svg width="30px"
+                                        height="30px" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path d="M7 12L16 12" stroke="#200E32" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M13 16L17 12L13 8" stroke="#200E32" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg> Quản lý chuyên mục</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center w-100 mb-4">
+                        <div class="d-flex align-items-center ">
+                            <h4 class="card-title totalUser m-0"></h4>
+                            <div class="d-flex align-items-center px-3">
+                                <span class="mx-1">Xem</span> <select id="multiple-quantity" class="" multiple="multiple">
+                                    <option value=5>5</option>
+                                    <option value=10 selected>10</option>
+                                    <option value=25>25</option>
+                                    <option value=50>50</option>
+                                </select> <span class="mx-1">mục</span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center ">
+                            <div class="">sản phẩm bán chạy</div>
+                        </div>
+                        <div class="d-flex align-items-center ">
+                            <div class="">sản phẩm mới nhất</div>
+                        </div>
+                    </div>
+                    <div class="gird">
+                        <div class="row list">
+                        </div>
+                    </div>
+                </div>
+                 <div class=" d-flex justify-content-center">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="">
+                                <button class="page-link Previous" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </button>
+                            </li>
+                            <div class="pageNumber d-flex justify-content-center">
+                            </div>
+                            <li class="">
+                                <button class="page-link Next" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="toast"></div>
+
+<body>
+    <script type="module" src="~/js/Products/Products.js"></script>
+</body>

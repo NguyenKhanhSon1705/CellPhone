@@ -14,10 +14,7 @@ var SizePage = $('#multiple-quantity').multipleSelect({
     animate: 'slide',
     single: true,
     onClick: function () {
-        console.log('ldjaf')
-        console.log(+SizePage.multipleSelect('getSelects'))
         GetAPI('/admin/blog/post/postjson', listPost, { CurrentPage: pageCurrent, SizePage: +SizePage.multipleSelect('getSelects') })
-
     }
 })
 
@@ -66,7 +63,6 @@ let Paging = (data, callback) => {
 function listPost(data) {
     $(".listpost").empty();
     $.each(data.data.listPost, (index, item) => {
-        // console.log(item)
         let html = `
                 <tr>
                     <td class="note-item">

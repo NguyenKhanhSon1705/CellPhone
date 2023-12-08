@@ -1,0 +1,119 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="card-title">Thêm mới sản phẩm</h4>
+                        <a href="">Danh sách sản phẩm</a>
+                    </div>
+                    <ul class="nav nav-pills mb-3">
+                        <li class="nav-item"><a href="#navpills-1" class="nav-link active" data-toggle="tab"
+                                aria-expanded="false">Thông tin sản phẩm</a>
+                        </li>
+                        <li class="nav-item"><a href="#navpills-2" class="nav-link" data-toggle="tab"
+                                aria-expanded="false">Hình ảnh</a>
+                        </li>
+                        <li class="nav-item"><a href="#navpills-3" class="nav-link" data-toggle="tab"
+                                aria-expanded="true">Chi tiết </a>
+                        </li>
+                    </ul>
+                    <form id="Create" method="post">
+                        <div class="tab-content br-n pn">
+                            <div id="navpills-1" class="tab-pane active">
+                                <div class="row">
+                                    <div class="col col-12">
+                                        <select id="multiple" class="select w-100" multiple="multiple">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="form-group form-field w-100 d-flex">
+                                        <div class="">
+                                            <img id="previewImage" height=100 width=130 src="/images/loader.gif"
+                                                class=" px-2"></img>
+                                            <input id="fileInput" name="file" type="file" class="d-none" />
+                                            <label for="fileInput" class="box-shadow label-s d-inline px-2">Chọn
+                                                Tệp</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-field w-100  d-flex">
+                                        <div class="custom-checkbox ">
+                                            <input id="check" name="check" type="checkbox">
+                                            <label for="check" class="form-label"
+                                                style="transform: translate(10px, -20px);">Duyệt đăng</label>
+                                        </div>
+                                    </div>
+                                    <div class="col col-6">
+                                        <div class="form-group form-field ">
+                                            <input id="name" name="Title" rule="required" type="text" placeholder=" "
+                                                class=" form-input form-error form-control ">
+                                            <label for="name" class="form-label">Tên sản phẩm</label>
+                                            <span class="form-message"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col col-6">
+                                        
+                                    </div>
+                                    <div class="col col-6">
+                                        <div class="form-group form-field ">
+                                            <input type="number" id="price" name="Price" rule="required" type="text"
+                                                placeholder=" " class=" form-input form-error form-control ">
+                                            <label for="name" class="form-label">Giá sản phẩm</label>
+                                            <span class="form-message"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col col-6">
+                                        <div class="form-group form-field ">
+                                            <input type="number" value="" id="name" name="Promotion" rule="required" type="text"
+                                                placeholder=" " class=" form-input form-error form-control ">
+                                            <label for="name" class="form-label">Khuyến mãi</label>
+                                            <span class="form-message"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex form-field justify-content-center">
+                                        <button type="submit"
+                                            class="button-ainmate form-submit button box-shadow px-5">Đăng</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="navpills-2" class="tab-pane">
+                                <div class="row align-items-center">
+                                    <div class="col-sm-6 col-md-4 col-xl-2">
+                                        <img src="" alt="" class="img-fluid thumbnail m-r-15">
+                                    </div>
+                                    <div class="col-sm-6 col-md-8 col-xl-10">
+                                        <p>Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu
+                                            banh mi, qui irure terry richardson ex squid.</p>
+                                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt
+                                            tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor,
+                                            williamsburg carles vegan helvetica.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="navpills-3" class="tab-pane">
+                                <div class="row align-items-center">
+                                    <div class="col-sm-6 col-md-4 col-xl-2">
+                                        <img src="" alt="" class="img-fluid thumbnail m-r-15">
+                                    </div>
+                                    <div class="col-sm-6 col-md-8 col-xl-10">
+                                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt
+                                            tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor,
+                                            williamsburg carles vegan helvetica.</p>
+                                        <p>Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu
+                                            banh mi, qui irure terry richardson ex squid.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="~/js/Products/Products.js"></script>

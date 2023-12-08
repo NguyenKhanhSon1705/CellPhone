@@ -43,7 +43,7 @@ export const GetAPI = async (url, callback, object = undefined) => {
 
 
 
-export const PostAPI = (url, object, callback, post) => {
+export const PostAPI = (url, object, callback, post = null) => {
   var token = $('input[name="__RequestVerificationToken"]').val();
   let body = document.querySelector('.content-body');
   let div = document.createElement('div');
@@ -84,12 +84,18 @@ export const PostAPI = (url, object, callback, post) => {
       div.remove();
     })
   });
-  $(document).one('click', '.yes', function () {
+  if(post == null){
     Post(url, object, token, data => {
       callback(data)
     })
-    div.remove()
-  });
+  }else{
+    $(document).one('click', '.yes', function () {
+      Post(url, object, token, data => {
+        callback(data)
+      })
+      div.remove()
+    });
+  }
   $(document).one('keydown', function (event) {
     if (event.which === 13) {  // Kiểm tra xem phím nhấn có phải là Enter không (mã phím 13)
       event.preventDefault();

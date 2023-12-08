@@ -1,0 +1,18 @@
+.box-buy{
+    height: 50px;
+    transform: translateY(-50%);
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    display: flex;
+    right: 30%;
+    top: 50%;
+    align-items: center;
+}
+.buy{
+    position: fixed;
+    bottom: 0;
+    left: 0%;
+    right: 0%;
+    background-color: white;
+}

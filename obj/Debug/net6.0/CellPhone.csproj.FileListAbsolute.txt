@@ -166,3 +166,9 @@ C:\Users\My Pc\OneDrive\Desktop\CellPhone - Copy\obj\Debug\net6.0\refint\CellPho
 C:\Users\My Pc\OneDrive\Desktop\CellPhone - Copy\obj\Debug\net6.0\CellPhone.pdb
 C:\Users\My Pc\OneDrive\Desktop\CellPhone - Copy\obj\Debug\net6.0\CellPhone.genruntimeconfig.cache
 C:\Users\My Pc\OneDrive\Desktop\CellPhone - Copy\obj\Debug\net6.0\ref\CellPhone.dll
+C:\Users\My Pc\OneDrive\Desktop\CellPhone\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\My Pc\OneDrive\Desktop\CellPhone\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\My Pc\OneDrive\Desktop\CellPhone\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\My Pc\OneDrive\Desktop\CellPhone\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\My Pc\OneDrive\Desktop\CellPhone\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\My Pc\OneDrive\Desktop\CellPhone\bin\Debug\net6.0\Newtonsoft.Json.dll

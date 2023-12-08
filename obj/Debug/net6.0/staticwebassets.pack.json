@@ -1429,6 +1429,10 @@
       "PackagePath": "staticwebassets\\images\\Post\\Screenshot (94).png"
     },
     {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\Post\\ip1.png",
+      "PackagePath": "staticwebassets\\images\\Post\\ip1.png"
+    },
+    {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\admin.png",
       "PackagePath": "staticwebassets\\images\\admin.png"
     },
@@ -1729,12 +1733,28 @@
       "PackagePath": "staticwebassets\\images\\imgs\\9.png"
     },
     {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\ip-14-5.webp",
+      "PackagePath": "staticwebassets\\images\\ip-14-5.webp"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\ip14-8.jpg",
+      "PackagePath": "staticwebassets\\images\\ip14-8.jpg"
+    },
+    {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\loader.gif",
       "PackagePath": "staticwebassets\\images\\loader.gif"
     },
     {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\logo-email.png",
+      "PackagePath": "staticwebassets\\images\\logo-email.png"
+    },
+    {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\logo-nks-1ac7b6.png",
       "PackagePath": "staticwebassets\\images\\logo-nks-1ac7b6.png"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\logo-phone.png",
+      "PackagePath": "staticwebassets\\images\\logo-phone.png"
     },
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\logo_nav_left.png",
@@ -1747,6 +1767,10 @@
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\logo_title.png",
       "PackagePath": "staticwebassets\\images\\logo_title.png"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\logozalo.png",
+      "PackagePath": "staticwebassets\\images\\logozalo.png"
     },
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\media\\media-1.png",
@@ -1833,8 +1857,96 @@
       "PackagePath": "staticwebassets\\images\\products\\2161ce1698ee64e1d773704f83715d7b.jpg"
     },
     {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\Screenshot (105).png",
+      "PackagePath": "staticwebassets\\images\\products\\Screenshot (105).png"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\Screenshot (146).png",
+      "PackagePath": "staticwebassets\\images\\products\\Screenshot (146).png"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\Screenshot (153).png",
+      "PackagePath": "staticwebassets\\images\\products\\Screenshot (153).png"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\Screenshot (179).png",
+      "PackagePath": "staticwebassets\\images\\products\\Screenshot (179).png"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\Screenshot (96).png",
+      "PackagePath": "staticwebassets\\images\\products\\Screenshot (96).png"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\Screenshot (99).png",
+      "PackagePath": "staticwebassets\\images\\products\\Screenshot (99).png"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\Screenshot 2023-06-21 014414.png",
+      "PackagePath": "staticwebassets\\images\\products\\Screenshot 2023-06-21 014414.png"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\ip1.png",
+      "PackagePath": "staticwebassets\\images\\products\\ip1.png"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\ip2.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\ip2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\ip3.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\ip3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\ip4.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\ip4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\ip5.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\ip5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\ip6.png",
+      "PackagePath": "staticwebassets\\images\\products\\ip6.png"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\laptop2.png",
+      "PackagePath": "staticwebassets\\images\\products\\laptop2.png"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\laptop3.png",
+      "PackagePath": "staticwebassets\\images\\products\\laptop3.png"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\laptop5.png",
+      "PackagePath": "staticwebassets\\images\\products\\laptop5.png"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\laptop7.png",
+      "PackagePath": "staticwebassets\\images\\products\\laptop7.png"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\oppo4.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\oppo4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\samsung1.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\samsung1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\samsung8.png",
+      "PackagePath": "staticwebassets\\images\\products\\samsung8.png"
+    },
+    {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\t_m_12.webp",
       "PackagePath": "staticwebassets\\images\\products\\t_m_12.webp"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\tablet1.png",
+      "PackagePath": "staticwebassets\\images\\products\\tablet1.png"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\tablet2.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\tablet2.jpg"
     },
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\profile\\1.jpg",
@@ -1995,6 +2107,18 @@
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Contact.js",
       "PackagePath": "staticwebassets\\js\\Contact.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Products\\AddCart.js",
+      "PackagePath": "staticwebassets\\js\\Products\\AddCart.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Products\\Products.js",
+      "PackagePath": "staticwebassets\\js\\Products\\Products.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Products\\categoryProduct.js",
+      "PackagePath": "staticwebassets\\js\\Products\\categoryProduct.js"
     },
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\ProfileUser.js",

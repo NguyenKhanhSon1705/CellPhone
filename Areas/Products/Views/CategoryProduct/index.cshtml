@@ -1,0 +1,48 @@
+@Html.AntiForgeryToken()
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="card-title">Danh sách phần bài đăng</h4>
+                        <div class="mb-2">
+                            <button class="box-shadow button create-category">Thêm phần bài đăng</button>
+                            <a asp-area="products" asp-controller="products" asp-action="Index"><svg width="30px" height="30px"
+                                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path d="M7 12L16 12" stroke="#200E32" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path d="M13 16L17 12L13 8" stroke="#200E32" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </svg>Quản lý sản phẩm</a>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered zero-configuration">
+                            <thead>
+                                <tr>
+                                    <th>Tiêu đề</th>
+                                    <th>Url hiện thị</th>
+                                    <th>Chức năng</th>
+                                </tr>
+                            </thead>
+                            <tbody class="list">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="toast"></div>
+
+<body>
+    <script type="module" src="~/js/products/categoryProduct.js"></script>
+</body>

@@ -38,9 +38,9 @@ public class CategoryController : Controller
         {
             _context.categories.Add(category);
             await _context.SaveChangesAsync();
-            return Json(new { code = 200, data = "", message = "success" });
+            return Json(new { code = 200, data = "success", message = "success" });
         }
-        return Json(new { code = 500, data = "", message = "error" });
+        return Json(new { code = 500, data = "error", message = "error" });
     }
 
     [HttpPost]
@@ -84,19 +84,7 @@ public class CategoryController : Controller
 
         return Json(new { code = 200, data = category, message = "success" });
     }
-    // [HttpPost]
-    // [ValidateAntiForgeryToken]
-    // public async Task<IActionResult> Edit(CategoryModel category)
-    // {
-    //     var c = await _context.categories.FindAsync(category.Id);
-    //     if(c ==  null){
-    //         return NotFound();
-    //     }
-    //        await _context.categories.AddAsync(category);
-    //         await _context.SaveChangesAsync();
-
-    //     return Json(new {code = 200 , data = ""  , message = "success"});
-    // }
+    
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> EditCategory(CategoryModel category)
