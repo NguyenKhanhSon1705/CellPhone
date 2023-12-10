@@ -10,9 +10,42 @@
     align-items: center;
 }
 .buy{
+    height: 70px;
     position: fixed;
     bottom: 0;
     left: 0%;
     right: 0%;
     background-color: white;
+}
+/* Add a style for the disabled button */
+.btn-checkout[disabled] {
+    /* You can adjust the styles to fit your design */
+    background-color: #ccc; /* Change the background color */
+    color: #888; /* Change the text color */
+    cursor: not-allowed; /* Change the cursor */
+}
+
+/* Add a style for the enabled button */
+.btn-checkout:not([disabled]) {
+    /* You can adjust the styles to fit your design */
+    background-color: #4CAF50; /* Change the background color */
+    color: white; /* Change the text color */
+    cursor: pointer; /* Change the cursor */
+}
+
+.quantity-item{
+    position: relative;
+    .quantity{
+        align-items: center;
+        display: flex;
+        position: absolute;
+        background-color: #fff;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        justify-content: center;
+        top: -5px;
+        right: 51px;
+        color: red;
+    }
 }

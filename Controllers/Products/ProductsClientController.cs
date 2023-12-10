@@ -7,6 +7,7 @@ public class ProductsClientController : Controller
 {
     private readonly CellPhoneDB _context;
     private readonly CartService _cartService;
+    private List<CartItem> products = new List<CartItem>();
 
     public ProductsClientController(CellPhoneDB context, CartService cartService)
     {
@@ -85,25 +86,27 @@ public class ProductsClientController : Controller
         return Json(new { code = 200, data = "success", message = "success" });
     }
 
-
     [HttpPost("/getProducts")]
     [ValidateAntiForgeryToken]
     public IActionResult GetCartCheckOut(List<string> listPr)
     {
         var cart = _cartService.GetCartItems();
-        List<CartItem> products = new List<CartItem>();
+        var cartCheckout = _cartService.GetCheckout();
+        // List<CartItem> products = new List<CartItem>();
 
         foreach (var slug in listPr)
         {
             var cartItem = cart.Find(p => p.product.Slugp == slug);
-
             // Check if the product is found in the cart
             if (cartItem != null)
             {
-                products.Add(cartItem);
+                cartCheckout.Add(cartItem);
+                // products.Add(cartItem);\
+                _cartService.SaveCartCheckout(cartCheckout);
             }
         }
-        return Json(new { code = 200, data = products, message = "success1" });
+        // return View("Checkout",products);
+        return Json(new { code = 200, data = cartCheckout, message = "success" });
     }
 
     // Hiện thị giỏ hàng
@@ -133,11 +136,11 @@ public class ProductsClientController : Controller
     /// Cập nhật
     [Route("/updatecart", Name = "updatecart")]
     [HttpPost]
-    public IActionResult UpdateCart([FromForm] int productid, [FromForm] int quantity)
+    public IActionResult UpdateCart(string slug, int quantity)
     {
         // Cập nhật Cart thay đổi số lượng quantity ...
         var cart = _cartService.GetCartItems();
-        var cartitem = cart.Find(p => p.product.ProductID == productid);
+        var cartitem = cart.Find(p => p.product.Slugp == slug);
         if (cartitem != null)
         {
             // Đã tồn tại, tăng thêm 1
@@ -149,15 +152,15 @@ public class ProductsClientController : Controller
     }
 
     [Route("/checkout")]
+    [HttpGet]
     public IActionResult Checkout()
     {
-        var cart = _cartService.GetCartItems();
-        return Json(new { data = cart });
-        // ....
-        _cartService.ClearCart();
-
-        return Content("Da gui don hang");
-
+        var checkout = _cartService.GetCheckout();
+        _cartService.ClearCartCheckout();
+        if( checkout == null){
+            return RedirectToAction("Cart" , "Home");
+        }
+        return View(checkout);
     }
 
 }

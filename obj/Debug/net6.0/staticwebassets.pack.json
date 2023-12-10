@@ -2113,6 +2113,10 @@
       "PackagePath": "staticwebassets\\js\\Products\\AddCart.js"
     },
     {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Products\\Checkout.js",
+      "PackagePath": "staticwebassets\\js\\Products\\Checkout.js"
+    },
+    {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Products\\Products.js",
       "PackagePath": "staticwebassets\\js\\Products\\Products.js"
     },

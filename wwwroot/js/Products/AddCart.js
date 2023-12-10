@@ -1,6 +1,4 @@
 import { GetAPI, PostAPI } from "../Axios/Axios.js";
-import { Validate } from "../validateform.js";
-import { ConvertDate } from "../Ajax/Convert.js";
 import { toast } from "../effects.js";
 
 
@@ -33,6 +31,13 @@ $('.quantity-control').on('click', function () {
     } else if (action === 'decrease' && currentValue > 1) {
         targetInput.val(currentValue - 1);
     }
+    var quantity = this.parentNode.parentNode.querySelector('input[name="cartitem.quantity"]').value;
+
+    var slug = this.parentNode.parentNode.querySelector('.id-pr').getAttribute('href').substring(1)
+    
+    var ob = {slug: slug, quantity: quantity}
+    
+    PostAPI('/updatecart', ob , data=>{})
     updateTotalPrice();
 
 });
@@ -51,10 +56,49 @@ $('.product-checkbox').on('change', function () {
 });
 
 
+// function updateTotalPrice() {
+//     var sumPr = 0
+//     var total = 0;
+//     var arr = [];
+//     // Lặp qua tất cả các checkbox sản phẩm được chọn
+//     $('.product-checkbox:checked').each(function () {
+//         // Lấy giá trị data-price từ checkbox và cộng vào tổng
+//         var price = $(this).data('price');
+
+//         var quantity = this.parentNode.parentNode.querySelector('input[name="cartitem.quantity"]').value;
+//         // console.log(quantity);
+//         sumPr += +quantity
+//         total += +price * quantity;
+        
+//         var slug = this.parentNode.parentNode.querySelector('.id-pr').getAttribute('href').substring(1)
+//         // console.log(slug)
+//         arr.push(slug)
+//     });
+
+//     // Hiển thị tổng giá trị
+//     $('#total-price').text(formatCurrency(total));
+//     $('.sumPr').text(sumPr);
+//     console.log(arr)
+//     // if(sumPr>0){
+//         $('.btn-checkout').off('click').on('click', function () {
+//             var ob = {listPr: arr}
+//             if(sumPr > 0){
+//                 PostAPI('/getProducts' , ob ,  data=>{
+//                     if(data.code === 200){
+//                         console.log(data)
+//                         window.location.href = '/checkout'
+//                     }
+//                 })
+//             }
+//         })
+//     // }
+// }
+
 function updateTotalPrice() {
     var sumPr = 0
     var total = 0;
     var arr = [];
+
     // Lặp qua tất cả các checkbox sản phẩm được chọn
     $('.product-checkbox:checked').each(function () {
         // Lấy giá trị data-price từ checkbox và cộng vào tổng
@@ -63,26 +107,33 @@ function updateTotalPrice() {
         var quantity = this.parentNode.parentNode.querySelector('input[name="cartitem.quantity"]').value;
         sumPr += +quantity
         total += +price * quantity;
-        var slug = this.parentNode.parentNode.parentNode.querySelector('.id-pr').getAttribute('href').substring(1)
+
+        var slug = this.parentNode.parentNode.querySelector('.id-pr').getAttribute('href').substring(1)
         arr.push(slug)
     });
 
     // Hiển thị tổng giá trị
     $('#total-price').text(formatCurrency(total));
     $('.sumPr').text(sumPr);
-    console.log(arr);
-    // if(sumPr>0){
+
+    // Disable or enable btn-checkout based on the sumPr value
+    if (sumPr > 0) {
+        $('.btn-checkout').off('click').prop('disabled', false);
+
         $('.btn-checkout').off('click').on('click', function () {
-            var ob = {listPr: arr}
-            if(sumPr > 0){
-                console.log('test')
-                PostAPI('/getProducts' , ob ,  data=>{
-                    console.log(data)
-                })
-            }
-        })
-    // }
+            var ob = { listPr: arr }
+            PostAPI('/getProducts', ob, data => {
+                if (data.code === 200) {
+                    window.location.href = '/checkout';
+                }
+            });
+        });
+    } else {
+        // Disable the button when sumPr is less than or equal to 0
+        $('.btn-checkout').off('click').prop('disabled', true);
+    }
 }
+
 
 
 

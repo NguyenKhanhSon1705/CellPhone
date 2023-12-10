@@ -35,6 +35,10 @@ public class CartService
         var session = HttpContext.Session;
         session.Remove (CARTKEY);
     }
+    public  void ClearCartCheckout () {
+        var session = HttpContext.Session;
+        session.Remove (CHECKOUTKEY);
+    }
 
     // Lưu Cart (Danh sách CartItem) vào session
     public  void SaveCartSession (List<CartItem> ls) {
@@ -42,5 +46,21 @@ public class CartService
         string jsoncart = JsonConvert.SerializeObject (ls);
         session.SetString (CARTKEY, jsoncart);
     }       
+
+    public  void SaveCartCheckout (List<CartItem> ls) {
+        var session = HttpContext.Session;
+        string jsoncart = JsonConvert.SerializeObject (ls);
+        session.SetString (CHECKOUTKEY, jsoncart);
+    }   
+
+    public List<CartItem> GetCheckout () {
+
+        var session = HttpContext.Session;
+        string jsoncart = session.GetString (CHECKOUTKEY);
+        if (jsoncart != null) {
+            return JsonConvert.DeserializeObject<List<CartItem>> (jsoncart);
+        }
+        return new List<CartItem> ();
+    }   
 
 }
