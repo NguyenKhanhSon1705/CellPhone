@@ -200,6 +200,51 @@ namespace CellPhone.Migrations
                     b.ToTable("contacts", (string)null);
                 });
 
+            modelBuilder.Entity("MenuAdminModel", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("ActionName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Areas")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ControllerName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("IsActive")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Link")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("MenuOrder")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int?>("ParentMenuId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Position")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("ParentMenuId");
+
+                    b.ToTable("menuAdmin", (string)null);
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -491,8 +536,7 @@ namespace CellPhone.Migrations
                     b.Property<DateTime>("DateUpdated")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
+                    b.Property<string>("Image")
                         .HasColumnType("longtext");
 
                     b.Property<int>("Inventory")
@@ -542,6 +586,15 @@ namespace CellPhone.Migrations
                         .HasForeignKey("ParentCategoryId");
 
                     b.Navigation("ParentCategory");
+                });
+
+            modelBuilder.Entity("MenuAdminModel", b =>
+                {
+                    b.HasOne("MenuAdminModel", "ParentsMenu")
+                        .WithMany("MenuChildren")
+                        .HasForeignKey("ParentMenuId");
+
+                    b.Navigation("ParentsMenu");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -685,6 +738,11 @@ namespace CellPhone.Migrations
             modelBuilder.Entity("CategoryProductModel", b =>
                 {
                     b.Navigation("CategoryChildren");
+                });
+
+            modelBuilder.Entity("MenuAdminModel", b =>
+                {
+                    b.Navigation("MenuChildren");
                 });
 
             modelBuilder.Entity("PostModel", b =>

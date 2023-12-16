@@ -11,13 +11,10 @@ public class ContactModel{
     [Required(ErrorMessage = "Phải nhập Email")]
     [EmailAddress(ErrorMessage = "Phải là địa chỉ email")]
     public string? Email {get; set;}
-
     public DateTime DateSend {get; set;}
     [DisplayName("Nội dung")]
     [Required(ErrorMessage = "Không được để trống")]
-
     public string? Message {get ; set;}
-
     [StringLength(50)]
     [Required(ErrorMessage = "Phải nhập số điện thoại")]
     [Phone(ErrorMessage = "Phải là số diện thoại")]

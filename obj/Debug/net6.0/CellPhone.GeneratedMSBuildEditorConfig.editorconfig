@@ -168,6 +168,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/My Pc/OneDrive/Desktop/CellPhone/Areas/MenuAdmin/Views/MenuAdmin/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVudUFkbWluXFZpZXdzXE1lbnVBZG1pblxpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/My Pc/OneDrive/Desktop/CellPhone/Areas/MenuAdmin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVudUFkbWluXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/My Pc/OneDrive/Desktop/CellPhone/Areas/MenuAdmin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVudUFkbWluXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/My Pc/OneDrive/Desktop/CellPhone/Areas/Order/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JkZXJcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/My Pc/OneDrive/Desktop/CellPhone/Areas/Order/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JkZXJcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/My Pc/OneDrive/Desktop/CellPhone/Areas/Products/Views/CategoryProduct/create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdHNcVmlld3NcQ2F0ZWdvcnlQcm9kdWN0XGNyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

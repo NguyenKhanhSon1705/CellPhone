@@ -87,18 +87,18 @@ public class CategoryController : Controller
     
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> EditCategory(CategoryModel category)
+    public async Task<IActionResult> EditCategory(MenuAdminModel menu)
     {
             try
             {
                 // Tìm đối tượng theo Id
-                var existingCategory = await _context.categories.FindAsync(category.Id);
+                var existingCategory = await _context.categories.FindAsync(menu.ID);
                 if (existingCategory == null)
                 {
                     return NotFound(); // Trả về 404 nếu không tìm thấy đối tượng
                 }
                 // Cập nhật các thuộc tính của đối tượng hiện tại với giá trị từ đối tượng category
-                _context.Entry(existingCategory).CurrentValues.SetValues(category);
+                _context.Entry(existingCategory).CurrentValues.SetValues(menu);
                 // Lưu thay đổi vào cơ sở dữ liệu
                 await _context.SaveChangesAsync();
                 return Json(new { code = 200, data = "", message = "success" });

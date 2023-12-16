@@ -1,0 +1,40 @@
+@Html.AntiForgeryToken()
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="card-title">Quản lý menu admin</h4>
+                        <div class="mb-2">
+                            <button class="box-shadow button create-category">Thêm phần bài đăng</button>
+                            
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered zero-configuration">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Tiêu đề</th>
+                                    <th class="text-center">Vị trí cha</th>
+                                    <th class="text-center">Vị trí con</th>
+                                    <th class="text-center">Trạng thái</th>
+                                    <th class="text-center">Chức năng</th>
+                                </tr>
+                            </thead>
+                            <tbody class="list">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="toast"></div>
+<body>
+    @* <script type="module" src="~/js/blog/categories.js"></script> *@
+        <script type="module" src="~/js/Menu/MenuAdmin.js"></script>
+
+</body>

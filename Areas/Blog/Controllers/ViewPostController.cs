@@ -43,6 +43,7 @@ public class ViewPostController : Controller
         }
 
         var posts = _context.posts
+                            .Where(m=>m.Status ==1)
                             .Include(p => p.Author)
                             .Include(p => p.PostCategories)
                             .ThenInclude(p => p.Category)

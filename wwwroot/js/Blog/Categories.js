@@ -21,8 +21,8 @@ function ViewCategories(data) {
                     <td>
                         <div class="note-item py-1 px-3 rounded text-white bg-${colors[level]}" style=";margin-left: ${level * 40}px; font-weight:${level === 0 ? 700 : 200}">${item.title}</div>
                     </td>
-                    <td>${item.slug}</td>
-                    <td>
+                    <td class="text-center">${item.slug}</td>
+                    <td class="text-center">
                     <button class="buttonDetails p-1 mx-2 box-shadow" data-id="${item.id}">
                     <svg width="20px" height="20px" viewBox="-2.1 -2.1 25.20 25.20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>edit_cover [#3fe972]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-419.000000, -359.000000)" fill="#6cf962"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M384,209.210475 L384,219 L363,219 L363,199.42095 L373.5,199.42095 L373.5,201.378855 L365.1,201.378855 L365.1,217.042095 L381.9,217.042095 L381.9,209.210475 L384,209.210475 Z M370.35,209.51395 L378.7731,201.64513 L380.4048,203.643172 L371.88195,212.147332 L370.35,212.147332 L370.35,209.51395 Z M368.25,214.105237 L372.7818,214.105237 L383.18415,203.64513 L378.8298,199 L368.25,208.687714 L368.25,214.105237 Z" id="edit_cover-[#3fe972]"> </path> </g> </g> </g> </g></svg></button>
                     <button class="buttonDelete p-1 box-shadow" data-id="${item.id}">

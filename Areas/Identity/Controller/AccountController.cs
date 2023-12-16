@@ -68,10 +68,10 @@ public class AccountController : Controller
                     },
                     protocol: Request.Scheme
                 );
-                // await _emailSender.SendEmailAsync(register.Email,
-                // "Xác nhận email",
-                // @$"Hãy <a href= '{HtmlEncoder.Default.Encode(callbackUrl)}'>bấm vào đây</a> 
-                // để xác nhận tài khoản.");
+                await _emailSender.SendEmailAsync(register.Email,
+                "Xác nhận email",
+                @$"Hãy <a href= '{HtmlEncoder.Default.Encode(callbackUrl)}'>bấm vào đây</a> 
+                để xác nhận tài khoản.");
 
                 if (_userManager.Options.SignIn.RequireConfirmedAccount)
                 {

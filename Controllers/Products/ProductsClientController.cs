@@ -162,5 +162,4 @@ public class ProductsClientController : Controller
         }
         return View(checkout);
     }
-
 }

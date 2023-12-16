@@ -1,45 +1,58 @@
 @model List<CartItem>
-    @* <link rel="stylesheet" href="~/lib/multiple-select/dist/multiple-select.min.css"> *@
+@* <link rel="stylesheet" href="~/lib/multiple-select/dist/multiple-select.min.css"> *@
 
 <body class="bg-light pt-4">
     <div class="container grid wide">
         <div class="row">
-            <div class="shadow p-3 mb-5 bg-body rounded col-md-6 order-md-2 mb-4">
+            <div class="shadow p-3 mb-5 bg-body rounded col-md-6 order-md-2 mb-4 position-fixed " style="right: 0;">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
                     <span class="text-muted">Giỏ hàng của bạn</span>
-                    @* <span class="badge badge-secondary badge-pill">3</span> *@
                 </h4>
                 <ul class="list-group mb-3">
-                    @{
-                        decimal total = 0; int quantity = 0;
-                    }
-                    @foreach (var i in Model)
-                    {
-                        <li class="list-group-item d-flex justify-content-between lh-condensed">
-                            <div class="d-flex align-items-center">
-                                <div class="quantity-item">
-                                    <b class="quantity box-shadow" title="Số lượng">@i.quantity</b>
-                                    <img height="50px" src="@i.product.Image" class="mr-2"></img>
+                    <table class="table table-hover text-center">
+                        <thead>
+                            <tr class="border-only-bottom">
+                                <th>STT</th>
+                                <th>Hình ảnh</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Số lượng</th>
+                                <th>Giá</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-                                </div>
-                                <h6 class="my-0"><a asp-controller="productsclient" asp-action="Details"
-                                        asp-route-slug="@i.product.Slugp">@i.product.Title</a></h6>
-                                <span class="ml-2 text-danger font-weight-bold"
-                                    title="@Functions.VNĐ(@i.product.Price * @i.quantity)">@Functions.VNĐ(@i.product.Price)đ</span>
-                            </div>
-                        </li>
-                        var sum = i.quantity * i.product.Price;
-                        quantity += i.quantity;
-                        total += sum;
-                    }
-                    <hr>
+                            @{
+                                decimal total = 0; int quantity = 0; int count = 1;
+                            }
+                            @foreach (var i in Model)
+                            {
+                                <tr>
+                                    <td>@(count++)</td>
+                                    <td><img height="40px" src="@i.product.Image" class="mr-2"></img></td>
+                                    <td>
+                                        <h6 class="my-0"><a asp-controller="productsclient" asp-action="Details"
+                                                asp-route-slug="@i.product.Slugp">@i.product.Title</a></h6>
+                                    </td>
+                                    <td>@i.quantity</td>
+                                    <td><span class="ml-2 text-danger font-weight-bold"
+                                            title="@Functions.VNĐ(@i.product.Price * @i.quantity)">@Functions.VNĐ(@i.product.Price)đ</span>
+                                    </td>
+                                </tr>
+                                var sum = i.quantity * i.product.Price;
+                                quantity += i.quantity;
+                                total += sum;
+                            }
+                            
+                        </tbody>
+                    </table>
                     <li class="list-group-item d-flex justify-content-between my-3">
                         <span>Tổng tiền (VND)</span>
                         <span>Số lượng: @quantity (sản phẩm)</span>
                         <strong class="text-danger">@Functions.VNĐ(total) đ</strong>
                     </li>
                     <li>
-                        <a asp-controller="productsclient" asp-action="cart" class="btn-lg box-shadow my-3">Trở về giỏ hàng</a>
+                        <a asp-controller="productsclient" asp-action="cart" class="btn-lg box-shadow my-3">Trở về giỏ
+                            hàng</a>
                     </li>
                 </ul>
 
@@ -93,8 +106,8 @@
 
                             <div class="col-md-12 mb-3">
                                 <label for="city">Tỉnh/ Thành phố</label>
-                                <select class=" d-block w-100" id="city" multiple >
-                                    
+                                <select class=" d-block w-100" id="city" multiple>
+
                                 </select>
 
                             </div>
@@ -104,13 +117,13 @@
                         <div class="row ">
                             <div class="col-md-6 mb-3">
                                 <label for="district">Quận/ Huyện</label>
-                                <select class=" custom-select d-block w-100" id="district"   required>
+                                <select class=" custom-select d-block w-100" id="district" required>
 
                                 </select>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="wards">Phường/ Xã</label>
-                                <select class="custom-select d-block w-100" id="wards"  required>
+                                <select class="custom-select d-block w-100" id="wards" required>
 
                                 </select>
                             </div>

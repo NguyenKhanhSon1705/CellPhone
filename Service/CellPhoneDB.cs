@@ -64,5 +64,9 @@ public class CellPhoneDB : IdentityDbContext<AppUserModel>
 
     public DbSet<ProductImageModel> productImage { get; set; }
     public DbSet<ProductDetailModel> productDetail { get; set; }
+    public DbSet<MenuAdminModel> menuAdmin {get;set;}
+
+    
+
 
 }

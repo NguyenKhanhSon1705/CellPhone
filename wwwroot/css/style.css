@@ -7588,7 +7588,7 @@ sub {
 
 .nav-header {
   height: 5rem;
-  width: 11.1875rem;
+  width: 13.1875rem;
   display: inline-block;
   text-align: left;
   position: absolute;
@@ -7603,7 +7603,7 @@ sub {
     display: none; }
   @media only screen and (min-width: 1200px) and (max-width: 1350px) {
     .nav-header {
-      width: 11.1875rem; } }
+      width: 13.1875rem; } }
   .nav-header .brand-logo {
     z-index: 999; }
     .nav-header .brand-logo a {
@@ -7684,7 +7684,7 @@ sub {
   position: relative;
   padding: 0 0.9375rem;
   background: #07B5B8;
-  margin-left: 11.1875rem;
+  margin-left: 13.1875rem;
   transition: all .2s ease; }
   .header .header-content {
     height: 100%; }
@@ -7705,11 +7705,11 @@ sub {
       margin-left: 0; } }
 
 [data-sidebar-style="full"] .header, [data-sidebar-style="overlay"] .header {
-  width: calc(100% - 11.1875rem); }
+  width: calc(100% - 13.1875rem); }
   @media only screen and (min-width: 1200px) and (max-width: 1350px) {
     [data-sidebar-style="full"] .header, [data-sidebar-style="overlay"] .header {
-      width: calc(100% - 11.1875rem);
-      margin-left: 11.1875rem; } }
+      width: calc(100% - 13.1875rem);
+      margin-left: 13.1875rem; } }
   @media only screen and (max-width: 767px) {
     [data-sidebar-style="full"] .header, [data-sidebar-style="overlay"] .header {
       width: calc(100% - 3.75rem);
@@ -8137,15 +8137,15 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 
 .content-body {
   position: relative;
-  margin-left: 11.1875rem;
+  margin-left: 13.1875rem;
   z-index: 0; }
   @media only screen and (min-width: 1200px) and (max-width: 1350px) {
     .content-body {
-      margin-left: 11.1875rem; } }
+      margin-left: 13.1875rem; } }
 
 
 .nk-sidebar {
-  width: 11.1875rem;
+  width: 13.1875rem;
   padding-bottom: 112px;
   height: 100%;
   position: absolute;
@@ -8155,7 +8155,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   transition: all .2s ease; }
   @media only screen and (min-width: 1200px) and (max-width: 1350px) {
     .nk-sidebar {
-      width: 11.1875rem; } }
+      width: 13.1875rem; } }
   .nk-sidebar ul {
     padding: 0;
     margin: 0;
