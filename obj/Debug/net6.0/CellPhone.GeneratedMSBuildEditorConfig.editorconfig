@@ -180,6 +180,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVudUFkbWluXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/My Pc/OneDrive/Desktop/CellPhone/Areas/Order/Views/OrderManage/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JkZXJcVmlld3NcT3JkZXJNYW5hZ2VcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/My Pc/OneDrive/Desktop/CellPhone/Areas/Order/Views/Status/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JkZXJcVmlld3NcU3RhdHVzXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/My Pc/OneDrive/Desktop/CellPhone/Areas/Order/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcT3JkZXJcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -232,8 +240,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVudUNsaWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/My Pc/OneDrive/Desktop/CellPhone/Views/CategoryListProducts/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlMaXN0UHJvZHVjdHNcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/My Pc/OneDrive/Desktop/CellPhone/Views/Home/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/My Pc/OneDrive/Desktop/CellPhone/Views/OrderControler/Thanks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJDb250cm9sZXJcVGhhbmtzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/My Pc/OneDrive/Desktop/CellPhone/Views/ProductsClient/Cart.cshtml]
@@ -246,6 +262,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/My Pc/OneDrive/Desktop/CellPhone/Views/ProductsClient/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNDbGllbnRcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/My Pc/OneDrive/Desktop/CellPhone/Views/Shared/Components/CategoryMenu/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2F0ZWdvcnlNZW51XERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/My Pc/OneDrive/Desktop/CellPhone/Views/Shared/Components/CategorySidebar/Default.cshtml]

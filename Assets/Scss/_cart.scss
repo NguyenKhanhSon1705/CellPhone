@@ -10,7 +10,6 @@
     align-items: center;
 }
 .buy{
-    height: 70px;
     position: fixed;
     bottom: 0;
     left: 0%;
@@ -64,3 +63,29 @@
 .border-only-left{
     border-left: 1px solid #242424;
 }
+.scrollable-box{
+    overflow: auto;
+    height: 100vh;
+    &::-webkit-scrollbar{
+        width: 5px;
+    };
+    &::-webkit-scrollbar-thumb {
+        background-color: #c4c4c4; /* Màu của phần "nút" thanh cuộn */
+        border-radius: 5px; /* Độ cong góc của "nút" thanh cuộn */
+      }
+}
+
+
+  .custom-checkbox .custom-control-label::before {
+    border: 2px solid #a9a8a8; /* Màu đường viền của checkbox khi chưa được chọn */
+    background-color: #fff; /* Màu nền của checkbox khi chưa được chọn */
+  }
+
+  .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    border: 2px solid #a9a8a8; /* Màu đường viền của checkbox khi đã được chọn */
+    background-color: #a9a8a8; /* Màu nền của checkbox khi đã được chọn */
+  }
+
+  .custom-checkbox .custom-control-label::after {
+    background-color: #a9a8a8; /* Màu dấu tích khi checkbox đã được chọn */
+  }

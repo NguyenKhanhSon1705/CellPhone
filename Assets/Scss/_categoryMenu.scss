@@ -1,0 +1,46 @@
+.containerMenu {
+    background-color: #fff;
+    border-radius: 5px;
+    left: 0;
+    min-height: 100%;
+    // overflow: hidden;
+    padding: 0;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size: 14px;
+}
+
+.containerMenu-child {
+    display: none;
+    position: absolute;
+    // top: 30px;
+    border-radius: 5px;
+    height: 100% ;
+    left: 24%;
+    background-color: rgb(254, 254, 254);
+    z-index: 20;
+    border: 1px solid #ccc;
+    .menu-close {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #1dbfaf;
+        padding: 5px;
+    }
+
+}
+
+.item-category.actives {
+    cursor: pointer;
+    transition: all 0.5s;
+    transform: translateX(35px);
+}
+
+.pr-item{
+    line-height: 15px;
+    height: 40px;
+    overflow: hidden;
+}

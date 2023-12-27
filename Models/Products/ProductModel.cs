@@ -29,16 +29,19 @@ public class ProductModel
     [Display(Name = "Ngày cập nhật")]
     public DateTime DateUpdated { set; get; }
 
-    [Display(Name = "Giá sản phẩm")]
+    [Display(Name = "Giá mưới")]
     [Range(0, int.MaxValue, ErrorMessage = "Nhập giá trị từ {1}")]
     public decimal Price { set; get; }
 
+    [Display(Name = "Giá cũ")]
+    [Range(0, int.MaxValue, ErrorMessage = "Nhập giá trị từ {1}")]
+    public decimal PriceOld { set; get; }
     [Display(Name = "Khuyến mãi")]
     public int Promotion { set; get; }
     public int Inventory { set; get; }
 
     public List<ProductImageModel> ListImage { get; set; }
     public List<ProductDetailModel> ProductDetai { get; set; }
-    // [JsonInclude]
+    // [JsonIgnore]
     public List<ProductCategoryProductModel> ProductCategoryProducts { get; set; }
 }

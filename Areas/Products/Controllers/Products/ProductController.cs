@@ -99,19 +99,21 @@ public class ProductsController : Controller
         products.Published = Convert.ToBoolean(p.Status);
         products.Title = p.Title;
 
-        if (p.Image != null && p.Image.Length > 0)
-        {
-            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images/products", p.Image.FileName);
-            using (var stream = System.IO.File.Create(path))
-            {
-                await p.Image.CopyToAsync(stream);
-            }
-            products.Image = "/images/products/" + p.Image.FileName;
-        }
-        else
-        {
-            products.Image = "";
-        }
+        products.Image = await Functions.HandleFile(p.Image , "images/products");
+
+        // if (p.Image != null && p.Image.Length > 0)
+        // {
+        //     var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images/products", p.Image.FileName);
+        //     using (var stream = System.IO.File.Create(path))
+        //     {
+        //         await p.Image.CopyToAsync(stream);
+        //     }
+        //     products.Image = "/images/products/" + p.Image.FileName;
+        // }
+        // else
+        // {
+        //     products.Image = "";
+        // }
         _context.products.Add(products);
         if (p.CategoryIDs != null)
         {

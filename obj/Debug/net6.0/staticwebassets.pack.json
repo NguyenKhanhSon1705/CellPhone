@@ -1057,32 +1057,76 @@
       "PackagePath": "staticwebassets\\icons\\flag-icon-css\\flags\\zw.svg"
     },
     {
-      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\font-awesome\\css\\font-awesome.min.css",
-      "PackagePath": "staticwebassets\\icons\\font-awesome\\css\\font-awesome.min.css"
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\icon-fontawesome\\css\\all.css",
+      "PackagePath": "staticwebassets\\icons\\icon-fontawesome\\css\\all.css"
     },
     {
-      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\font-awesome\\fonts\\fontawesome-webfont3e6e.eot",
-      "PackagePath": "staticwebassets\\icons\\font-awesome\\fonts\\fontawesome-webfont3e6e.eot"
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\icon-fontawesome\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\icons\\icon-fontawesome\\css\\all.min.css"
     },
     {
-      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\font-awesome\\fonts\\fontawesome-webfont3e6e.svg",
-      "PackagePath": "staticwebassets\\icons\\font-awesome\\fonts\\fontawesome-webfont3e6e.svg"
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\icon-fontawesome\\css\\brands.css",
+      "PackagePath": "staticwebassets\\icons\\icon-fontawesome\\css\\brands.css"
     },
     {
-      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\font-awesome\\fonts\\fontawesome-webfont3e6e.ttf",
-      "PackagePath": "staticwebassets\\icons\\font-awesome\\fonts\\fontawesome-webfont3e6e.ttf"
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\icon-fontawesome\\css\\brands.min.css",
+      "PackagePath": "staticwebassets\\icons\\icon-fontawesome\\css\\brands.min.css"
     },
     {
-      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\font-awesome\\fonts\\fontawesome-webfont3e6e.woff",
-      "PackagePath": "staticwebassets\\icons\\font-awesome\\fonts\\fontawesome-webfont3e6e.woff"
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\icon-fontawesome\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\icons\\icon-fontawesome\\css\\fontawesome.css"
     },
     {
-      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\font-awesome\\fonts\\fontawesome-webfont3e6e.woff2",
-      "PackagePath": "staticwebassets\\icons\\font-awesome\\fonts\\fontawesome-webfont3e6e.woff2"
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\icon-fontawesome\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\icons\\icon-fontawesome\\css\\fontawesome.min.css"
     },
     {
-      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\font-awesome\\fonts\\fontawesome-webfontd41d.eot",
-      "PackagePath": "staticwebassets\\icons\\font-awesome\\fonts\\fontawesome-webfontd41d.eot"
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\icon-fontawesome\\css\\regular.css",
+      "PackagePath": "staticwebassets\\icons\\icon-fontawesome\\css\\regular.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\icon-fontawesome\\css\\regular.min.css",
+      "PackagePath": "staticwebassets\\icons\\icon-fontawesome\\css\\regular.min.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\icon-fontawesome\\css\\solid.css",
+      "PackagePath": "staticwebassets\\icons\\icon-fontawesome\\css\\solid.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\icon-fontawesome\\css\\solid.min.css",
+      "PackagePath": "staticwebassets\\icons\\icon-fontawesome\\css\\solid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\icon-fontawesome\\css\\svg-with-js.css",
+      "PackagePath": "staticwebassets\\icons\\icon-fontawesome\\css\\svg-with-js.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\icon-fontawesome\\css\\svg-with-js.min.css",
+      "PackagePath": "staticwebassets\\icons\\icon-fontawesome\\css\\svg-with-js.min.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\icon-fontawesome\\css\\v4-font-face.css",
+      "PackagePath": "staticwebassets\\icons\\icon-fontawesome\\css\\v4-font-face.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\icon-fontawesome\\css\\v4-font-face.min.css",
+      "PackagePath": "staticwebassets\\icons\\icon-fontawesome\\css\\v4-font-face.min.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\icon-fontawesome\\css\\v4-shims.css",
+      "PackagePath": "staticwebassets\\icons\\icon-fontawesome\\css\\v4-shims.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\icon-fontawesome\\css\\v4-shims.min.css",
+      "PackagePath": "staticwebassets\\icons\\icon-fontawesome\\css\\v4-shims.min.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\icon-fontawesome\\css\\v5-font-face.css",
+      "PackagePath": "staticwebassets\\icons\\icon-fontawesome\\css\\v5-font-face.css"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\icon-fontawesome\\css\\v5-font-face.min.css",
+      "PackagePath": "staticwebassets\\icons\\icon-fontawesome\\css\\v5-font-face.min.css"
     },
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\ionicons\\css\\ionicons.css",
@@ -1383,6 +1427,34 @@
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.woff2",
       "PackagePath": "staticwebassets\\icons\\weather-icons\\fonts\\weathericons-regular-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\Banner\\gen 9.webp",
+      "PackagePath": "staticwebassets\\images\\Banner\\gen 9.webp"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\Banner\\m14.webp",
+      "PackagePath": "staticwebassets\\images\\Banner\\m14.webp"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\Banner\\ss-1-list.webp",
+      "PackagePath": "staticwebassets\\images\\Banner\\ss-1-list.webp"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\Banner\\ss-2-list.webp",
+      "PackagePath": "staticwebassets\\images\\Banner\\ss-2-list.webp"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\Banner\\ss-3-list.webp",
+      "PackagePath": "staticwebassets\\images\\Banner\\ss-3-list.webp"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\Banner\\ss-4-list.webp",
+      "PackagePath": "staticwebassets\\images\\Banner\\ss-4-list.webp"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\Banner\\ưu-dai-sinhvien-chung-right-banner.webp",
+      "PackagePath": "staticwebassets\\images\\Banner\\ưu-dai-sinhvien-chung-right-banner.webp"
     },
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\Facebook-logo.png",
@@ -1861,6 +1933,10 @@
       "PackagePath": "staticwebassets\\images\\products\\Screenshot (105).png"
     },
     {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\Screenshot (130).png",
+      "PackagePath": "staticwebassets\\images\\products\\Screenshot (130).png"
+    },
+    {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\Screenshot (146).png",
       "PackagePath": "staticwebassets\\images\\products\\Screenshot (146).png"
     },
@@ -1925,8 +2001,20 @@
       "PackagePath": "staticwebassets\\images\\products\\laptop7.png"
     },
     {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\laptop8.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\laptop8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\logo.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\logo.jpg"
+    },
+    {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\oppo4.jpg",
       "PackagePath": "staticwebassets\\images\\products\\oppo4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\phn-tch-thit-k-h-thng-ca-hng-bn-in-thoi-di-ng-7-2048.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\phn-tch-thit-k-h-thng-ca-hng-bn-in-thoi-di-ng-7-2048.jpg"
     },
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\images\\products\\samsung1.jpg",
@@ -2113,12 +2201,28 @@
       "PackagePath": "staticwebassets\\js\\Menu\\MenuAdmin.js"
     },
     {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Menu\\MenuClient.js",
+      "PackagePath": "staticwebassets\\js\\Menu\\MenuClient.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Order\\Order.js",
+      "PackagePath": "staticwebassets\\js\\Order\\Order.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Order\\Status.js",
+      "PackagePath": "staticwebassets\\js\\Order\\Status.js"
+    },
+    {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Products\\AddCart.js",
       "PackagePath": "staticwebassets\\js\\Products\\AddCart.js"
     },
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Products\\Checkout.js",
       "PackagePath": "staticwebassets\\js\\Products\\Checkout.js"
+    },
+    {
+      "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Products\\ListProductCategories.js",
+      "PackagePath": "staticwebassets\\js\\Products\\ListProductCategories.js"
     },
     {
       "Id": "C:\\Users\\My Pc\\OneDrive\\Desktop\\CellPhone\\wwwroot\\js\\Products\\Products.js",

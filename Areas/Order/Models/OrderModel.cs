@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using CellPhone.Migrations;
 
 public class OrderModel{
     [Key]
@@ -16,9 +17,9 @@ public class OrderModel{
 
     public string? StaffApprove {get;set;} // Nhân viên phê duyệt
    
-    public int StatusID {get;set;}
+    public int? StatusID {get;set;}
     [ForeignKey("StatusID")]
-    public StatusModel Status {get;set;} // trạng thái đơn hàng
+    public StatusModel? Status {get;set;} // trạng thái đơn hàng
 
     public string PaymentMethod {get;set;} // phương thức thanh toán
     public DateTime CreatedDate {get;set;}
@@ -28,4 +29,8 @@ public class OrderModel{
 
     public decimal TotalPrice {get;set;}
     public int TotalQuantity {get;set;}
+
+
+    public List<OrderDetailsModel> orderDetail {get;set;}
+
 }

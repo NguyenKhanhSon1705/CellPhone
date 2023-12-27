@@ -1,5 +1,13 @@
-@await Component.InvokeAsync("SliderBar")
-<hr>
+<div class="grid wide bg-white">
+    <div class="row handMouse" style="position: relative;">
+            @await Component.InvokeAsync("CategoryMenu")
+        
+        <div class="col col-9">
+            @await Component.InvokeAsync("SliderBar")
+        </div>
+        
+    </div>
+</div>
 @await Component.InvokeAsync("SwiperProducts")
 
 @* @await Component.InvokeAsync("SwiperProducts") *@
@@ -22,8 +30,8 @@
             </a>
         </div>
     </div>
-    <button onclick="showContact()" ondblclick="upTop()" class="contact up-header">
-        <i class="ti-angle-double-up text-white"></i>
+    <button onclick="showContact()" ondblclick="upTop()" class="contact up-header ">
+        <i class="fa-solid fa-angles-up"></i>
     </button>
 </div>
 

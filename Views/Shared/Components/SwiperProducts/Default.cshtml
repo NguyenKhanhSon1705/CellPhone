@@ -1,226 +1,5 @@
 ﻿@model List<ProductModel>
 
-@* @model CellPhone.Views.Shared.Components.SwiperProducts.DefaultModel
-@{
-
-}
-
-<head>
-<link rel="stylesheet" href="~/css/site.min.css">
-<link rel="stylesheet" href="~/css/grid.css">
-<link href="~/icons/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
-</head>
-
-<body>
-<!-- Swiper -->
-<div class="grid wide">
-<div class="row">
-<div class="Container col">
-<h1>Sản phẩm bạn chạy</h1>
-<div id="mySwiper" class="swiper mySwiper">
-<div class="swiper-wrapper">
-<div class="swiper-slide">
-<a href="#" class="products">
-<div class="products-imgae p-1">
-<img width="70%" height="70%" src="~/images/products/t_m_12.webp" alt="Iphone 14">
-</div>
-<div class="products-content p-2">
-<p class="products-content-title">iPhone 14 Pro 128GB | Chính hãng VN/AiPhone 14 Pro 128GB </p>
-<div class="products-content-price">
-<span class="price-new">22.222.222 đ</span>
-<span class="price-old">25.555.555 đ</span>
-</div>
-</div>
-<div class="products-infoFree ">
-<p>Tặng thêm dịch vụ bảo hành vip 12 tháng 1 đổi 1</p>
-</div>
-<div class="products-likes">
-<i class="ti-heart"></i>
-</div>
-</a>
-</div>
-
-<div class="swiper-slide">
-<a href="#" class="products">
-<div class="products-imgae p-1">
-<img width="70%" height="70%" src="~/images/products/t_m_12.webp" alt="Iphone 14">
-</div>
-<div class="products-content p-2">
-<p class="products-content-title">iPhone 14 Pro 128GB | Chính hãng VN/AiPhone 14 Pro 128GB | Chính hãng VN/AiPhone 14
-Pro 128GB | Chính hãng VN/A</p>
-<div class="products-content-price">
-<span class="price-new">22.222.222 đ</span>
-<span class="price-old">25.555.555 đ</span>
-</div>
-</div>
-<div class="products-infoFree ">
-<p>Tặng thêm dịch vụ bảo hành vip 12 tháng 1 đổi 1</p>
-</div>
-<div class="products-likes">
-<i class="ti-heart"></i>
-</div>
-</a>
-</div>
-<div class="swiper-slide">
-<a href="#" class="products">
-<div class="products-imgae p-1">
-<img width="70%" height="70%" src="~/images/products/t_m_12.webp" alt="Iphone 14">
-</div>
-<div class="products-content p-2">
-<p class="products-content-title">iPhone 14 Pro 128GB | Chính hãng VN/AiPhone 14 Pro 128GB | Chính hãng VN/AiPhone 14
-Pro 128GB | Chính hãng VN/A</p>
-<div class="products-content-price">
-<span class="price-new">22.222.222 đ</span>
-<span class="price-old">25.555.555 đ</span>
-</div>
-</div>
-<div class="products-infoFree ">
-<p>Tặng thêm dịch vụ bảo hành vip 12 tháng 1 đổi 1</p>
-</div>
-<div class="products-likes">
-<i class="ti-heart"></i>
-</div>
-</a>
-</div>
-
-<div class="swiper-slide">
-<a href="#" class="products">
-<div class="products-imgae p-1">
-<img width="70%" height="70%" src="~/images/products/t_m_12.webp" alt="Iphone 14">
-</div>
-<div class="products-content p-2">
-<p class="products-content-title">iPhone 14 Pro 128GB | Chính hãng VN/AiPhone 14 Pro 128GB | Chính hãng VN/AiPhone 14
-Pro 128GB | Chính hãng VN/A</p>
-<div class="products-content-price">
-<span class="price-new">22.222.222 đ</span>
-<span class="price-old">25.555.555 đ</span>
-</div>
-</div>
-<div class="products-infoFree ">
-<p>Tặng thêm dịch vụ bảo hành vip 12 tháng 1 đổi 1</p>
-</div>
-<div class="products-likes">
-<i class="ti-heart"></i>
-</div>
-</a>
-</div>
-
-<div class="swiper-slide">
-<a href="#" class="products">
-<div class="products-imgae p-1">
-<img width="70%" height="70%" src="~/images/products/t_m_12.webp" alt="Iphone 14">
-</div>
-<div class="products-content p-2">
-<p class="products-content-title">iPhone 14 Pro 128GB | Chính hãng VN/AiPhone 14 Pro 128GB | Chính hãng VN/AiPhone 14
-Pro 128GB | Chính hãng VN/A</p>
-<div class="products-content-price">
-<span class="price-new">22.222.222 đ</span>
-<span class="price-old">25.555.555 đ</span>
-</div>
-</div>
-<div class="products-infoFree ">
-<p>Tặng thêm dịch vụ bảo hành vip 12 tháng 1 đổi 1</p>
-</div>
-<div class="products-likes">
-<i class="ti-heart"></i>
-</div>
-</a>
-</div>
-
-<div class="swiper-slide">
-<a href="#" class="products">
-<div class="products-imgae p-1">
-<img width="70%" height="70%" src="~/images/products/t_m_12.webp" alt="Iphone 14">
-</div>
-<div class="products-content p-2">
-<p class="products-content-title">iPhone 14 Pro 128GB | Chính hãng VN/AiPhone 14 Pro 128GB | Chính hãng VN/AiPhone 14
-Pro 128GB | Chính hãng VN/A</p>
-<div class="products-content-price">
-<span class="price-new">22.222.222 đ</span>
-<span class="price-old">25.555.555 đ</span>
-</div>
-</div>
-<div class="products-infoFree ">
-<p>Tặng thêm dịch vụ bảo hành vip 12 tháng 1 đổi 1</p>
-</div>
-<div class="products-likes">
-<i class="ti-heart"></i>
-</div>
-</a>
-</div>
-
-<div class="swiper-slide">
-<a href="#" class="products">
-<div class="products-imgae p-1">
-<img width="70%" height="70%" src="~/images/products/t_m_12.webp" alt="Iphone 14">
-</div>
-<div class="products-content p-2">
-<p class="products-content-title">iPhone 14 Pro 128GB | Chính hãng VN/AiPhone 14 Pro 128GB | Chính hãng VN/AiPhone 14
-Pro 128GB | Chính hãng VN/A</p>
-<div class="products-content-price">
-<span class="price-new">22.222.222 đ</span>
-<span class="price-old">25.555.555 đ</span>
-</div>
-</div>
-<div class="products-infoFree ">
-<p>Tặng thêm dịch vụ bảo hành vip 12 tháng 1 đổi 1</p>
-</div>
-<div class="products-likes">
-<i class="ti-heart"></i>
-</div>
-</a>
-</div>
-
-</div>
-<div class="swiper-button-next"></div>
-<div class="swiper-button-prev"></div>
-<div class="swiper-pagination"></div>
-</div>
-</div>
-
-</div>
-</div>
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<!-- Initialize Swiper -->
-<script>
-swiper('#mySwiper', 5, 1);
-function swiper(idContainer, slidesPerView, row) {
-var swiper = new Swiper(idContainer, {
-slidesPerView: slidesPerView,
-grid: {
-rows: row
-},
-spaceBetween: 10,
-pagination: {
-el: ".swiper-pagination",
-clickable: true
-},
-navigation: {
-nextEl: ".swiper-button-next",
-prevEl: ".swiper-button-prev"
-},
-autoplay: {
-delay: 3000,
-disableOnInteraction: true
-}
-});
-
-var s = document.querySelector(idContainer);
-s.addEventListener('mouseenter', function () {
-swiper.autoplay.stop();
-});
-s.addEventListener('mouseleave', function () {
-swiper.autoplay.start()
-});
-}
-
-
-</script>
-</body> *@
 
 <!DOCTYPE html>
 <html lang="en">
@@ -240,14 +19,14 @@ swiper.autoplay.start()
             height: 100%;
         }
 
-        body {
+        @* body {
             background: #eee;
             font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
             font-size: 14px;
             color: #000;
             margin: 0;
             padding: 0;
-        }
+        } *@
 
         .swiper {
             width: 100%;
@@ -256,7 +35,7 @@ swiper.autoplay.start()
 
         .swiper-slide {
             text-align: center;
-            font-size: 18px;
+            @* font-size: 18px; *@
             background: #fff;
             display: flex;
             justify-content: center;
@@ -296,8 +75,6 @@ swiper.autoplay.start()
                                 </div>
                                 <div class="product-describe tablet">
                                     <span class="decribe-text">
-                                        Ngày tạo:
-                                        Người tạo:
                                     </span>
                                 </div>
                             </a>
@@ -307,22 +84,19 @@ swiper.autoplay.start()
                                 </span>
 
                                 <div class="product-animation">
-                                    @* <a asp-controller="ProductsClient" asp-action="AddToCart" asp-route-slug="@i.Slugp"> *@
-                                        <button class="product-add add-cart" >
-                                            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                                                </g>
-                                                <g id="SVGRepo_iconCarrier">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                          d="M8.25014 6.01489C8.25005 6.00994 8.25 6.00498 8.25 6V5C8.25 2.92893 9.92893 1.25 12 1.25C14.0711 1.25 15.75 2.92893 15.75 5V6C15.75 6.00498 15.75 6.00994 15.7499 6.0149C17.0371 6.05353 17.8248 6.1924 18.4261 6.69147C19.2593 7.38295 19.4787 8.55339 19.9177 10.8943L20.6677 14.8943C21.2849 18.186 21.5934 19.8318 20.6937 20.9159C19.794 22 18.1195 22 14.7704 22H9.22954C5.88048 22 4.20595 22 3.30624 20.9159C2.40652 19.8318 2.71512 18.186 3.33231 14.8943L4.08231 10.8943C4.52122 8.55339 4.74068 7.38295 5.57386 6.69147C6.17521 6.19239 6.96288 6.05353 8.25014 6.01489ZM9.75 5C9.75 3.75736 10.7574 2.75 12 2.75C13.2426 2.75 14.25 3.75736 14.25 5V6C14.25 5.99999 14.25 6.00001 14.25 6C14.1747 5.99998 14.0982 6 14.0204 6H9.97954C9.90177 6 9.82526 6 9.75 6.00002C9.75 6.00002 9.75 6.00003 9.75 6.00002V5ZM15.4685 10.9144C15.792 11.1731 15.8444 11.6451 15.5856 11.9685L11.5856 16.9685C11.4524 17.1351 11.2545 17.2371 11.0415 17.2489C10.8285 17.2607 10.6205 17.1812 10.4697 17.0304L8.46965 15.0304C8.17676 14.7375 8.17676 14.2626 8.46965 13.9697C8.76255 13.6768 9.23742 13.6768 9.53031 13.9697L10.9375 15.3769L14.4143 11.0315C14.6731 10.7081 15.1451 10.6556 15.4685 10.9144Z"
-                                                          fill="#fff"></path>
-                                                </g>
-                                            </svg>
-                                        </button>
-                                    @* </a> *@
-                                    
+                                    <button class="product-add add-cart" >
+                                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                            </g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M8.25014 6.01489C8.25005 6.00994 8.25 6.00498 8.25 6V5C8.25 2.92893 9.92893 1.25 12 1.25C14.0711 1.25 15.75 2.92893 15.75 5V6C15.75 6.00498 15.75 6.00994 15.7499 6.0149C17.0371 6.05353 17.8248 6.1924 18.4261 6.69147C19.2593 7.38295 19.4787 8.55339 19.9177 10.8943L20.6677 14.8943C21.2849 18.186 21.5934 19.8318 20.6937 20.9159C19.794 22 18.1195 22 14.7704 22H9.22954C5.88048 22 4.20595 22 3.30624 20.9159C2.40652 19.8318 2.71512 18.186 3.33231 14.8943L4.08231 10.8943C4.52122 8.55339 4.74068 7.38295 5.57386 6.69147C6.17521 6.19239 6.96288 6.05353 8.25014 6.01489ZM9.75 5C9.75 3.75736 10.7574 2.75 12 2.75C13.2426 2.75 14.25 3.75736 14.25 5V6C14.25 5.99999 14.25 6.00001 14.25 6C14.1747 5.99998 14.0982 6 14.0204 6H9.97954C9.90177 6 9.82526 6 9.75 6.00002C9.75 6.00002 9.75 6.00003 9.75 6.00002V5ZM15.4685 10.9144C15.792 11.1731 15.8444 11.6451 15.5856 11.9685L11.5856 16.9685C11.4524 17.1351 11.2545 17.2371 11.0415 17.2489C10.8285 17.2607 10.6205 17.1812 10.4697 17.0304L8.46965 15.0304C8.17676 14.7375 8.17676 14.2626 8.46965 13.9697C8.76255 13.6768 9.23742 13.6768 9.53031 13.9697L10.9375 15.3769L14.4143 11.0315C14.6731 10.7081 15.1451 10.6556 15.4685 10.9144Z"
+                                                        fill="#fff"></path>
+                                            </g>
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
                         </div>

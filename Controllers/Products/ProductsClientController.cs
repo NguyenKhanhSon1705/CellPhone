@@ -157,8 +157,8 @@ public class ProductsClientController : Controller
     {
         var checkout = _cartService.GetCheckout();
         _cartService.ClearCartCheckout();
-        if( checkout == null){
-            return RedirectToAction("Cart" , "Home");
+        if( _cartService.GetCheckout() == null){
+            return Redirect("/cart");
         }
         return View(checkout);
     }

@@ -11,6 +11,8 @@
     left: 0;
     right: 0;
     z-index: 5;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 10px;
+
 }
 
 .menu-parents {
@@ -24,7 +26,7 @@
     transform: translateX(-50%);
     bottom: calc(0% - 19px);
     border: 10px solid transparent;
-    border-top-color: #fff;
+    border-top-color: #1dbfaf;
 }
 
 .menu-parents::before {

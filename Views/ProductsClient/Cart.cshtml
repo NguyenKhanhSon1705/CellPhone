@@ -14,7 +14,7 @@
     {
         decimal total = 0;
         int stt = 1;
-        <table class="table table-striped text-center">
+        <table class="table  text-center bg-white">
             <tr>
                 <th>
                     <div>
@@ -30,31 +30,29 @@
             </tr>
             @foreach (var cartitem in Model)
             {
-                @* var thanhtien = cartitem.quantity * cartitem.product.Price;
-        total += thanhtien; *@
-
                 <tr>
                     <td><input type="checkbox" class="product-checkbox box-shadow " data-price="@cartitem.product.Price" /></td>
 
-                    <td><img height="70" src="@cartitem.product.Image" alt=""></td>
+                    <td><a class="id-pr" asp-action="Details" asp-controller="ProductsClient"
+                            asp-route-slug="@cartitem.product.Slugp"><img height="70" src="@cartitem.product.Image" alt=""></a></td>
                     <td><a class="id-pr" asp-action="Details" asp-controller="ProductsClient"
                             asp-route-slug="@cartitem.product.Slugp">@cartitem.product.Title</a></td>
                     <td>@(cartitem.product.Price.ToString("n0"))</td>
-                    <td> <button class="quantity-control p-1 border-0 box-shadow" data-action="decrease"
+                    <td> <button class="quantity-control p-1 border-0 " data-action="decrease"
                             data-target="@($"quantity-{cartitem.product.ProductID}")">
-                            <i class="ti-minus"></i>
+                            <i class="fa-solid fa-minus"></i>
                         </button>
                         <input asp-for="@cartitem.quantity" class="text-center border-0 w-25 p-1 quantity-input"
                             value="@cartitem.quantity" max="100" min="1" id="@($"quantity-{cartitem.product.ProductID}")"
                             readonly />
-                        <button class="quantity-control p-1 border-0 box-shadow" data-action="increase"
+                        <button class="quantity-control p-1 border-0 " data-action="increase"
                             data-target="@($"quantity-{cartitem.product.ProductID}")">
-                            <i class="ti-plus"></i>
+                            <i class="fa-solid fa-plus"></i>
                         </button>
                     </td>
                     <td>
                         <a asp-route="removecart" asp-route-productid="@cartitem.product.ProductID"
-                            class=" p-1 box-shadow btn-danger">Xóa</a>
+                            class=" p-1 box-shadow btn-danger"><i class="fa-solid fa-trash"></i></a>
                     </td>
                 </tr>
             }

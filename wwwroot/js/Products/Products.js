@@ -15,44 +15,44 @@ var SizePage = $('#multiple-quantity').multipleSelect({
 
     }
 })
+
 var options = []
-GetAPI('/admin/products/category/indexJson', data => {
-    const Trees = buildMenu(data, null);
-    function buildMenu(datas, parentId, level = 0) {
-        let submenu = datas.data.filter(item => item.parentCategoryId === parentId);
-        if (submenu.length > 0) {
-            var object = {}
+ GetAPI('/admin/products/category/indexJson', data => {
+     const Trees = buildMenu(data, null);
+     function buildMenu(datas, parentId, level = 0) {
+         let submenu = datas.data.filter(item => item.parentCategoryId === parentId);
+         if (submenu.length > 0) {
+             var object = {}
             submenu.forEach((item) => {
 
-                let s = " . . . ";
-                for (let i = 0; i < level; i++) {
-                    s += " . . . ";
-                }
-                object = {
-                    value: item.id,
-                    text: s.concat(item.title),
-                    classes: `bg-${colors[level]} text-white rounded my-1 mx-2`
-                }
-                let ob = buildMenu(datas, item.id, level + 1)
+                 let s = " . . . ";
+                 for (let i = 0; i < level; i++) {
+                   s += " . . . ";
+                 }
+                 object = {
+                     value: item.id,
+                     text: s.concat(item.title),
+                     classes: `bg-${colors[level]} text-white rounded my-1 mx-2`
+                 }
+                 let ob = buildMenu(datas, item.id, level + 1)
                 options.unshift(object)
-            });
+             });
             return object;
-        }
-    }
-    let defaultOption = {
-        value: null,
+         }
+     }
+     let defaultOption = {
+         value: null,
         text: 'Phần tử cha lớn nhất',
         classes: `bg-primary text-white rounded my-1 mx-2`
-    }
+     }
     options.unshift(defaultOption)
-    $('#multiple').multipleSelect({
-        data: options,
-        animate: 'slide',
-        single: true,
-        filter: true,
-        placeholder: "Lựa chọn phần tử cha (có hoặc không)",
-    })
-})
+    $('#multiple').multipleSelect({        data: options,
+         animate: 'slide',
+       single: true,
+      filter: true,
+       placeholder: "Lựa chọn phần tử cha (có hoặc không)",
+     })
+ })
 var fileName
 $('#fileInput').change(function () {
     fileName = $(this).val().split('\\').pop();
@@ -123,9 +123,12 @@ let Paging = (data, callback) => {
 GetAPI('/admin/products/indexJson', listProducts)
 
 function listProducts(data) {
-    $(".list").empty();
-
+     $(".list").empty();
+  
+    
     $.each(data.data.listProducts, (index, item) => {
+       /* console.log(item.productCategoryProducts[0].category.title )*/
+        
         var html = `
         <div class="tablet-item col l-2-4 c-6 ">
             <div class="box-shadows">
@@ -150,7 +153,7 @@ function listProducts(data) {
                     <span class="decribe-text">
                         <p class="mb-0">Trạng thái: <span class="${item.published != false ? 'badge badge-success px-2 text-white' : ''}">${item.published !== false ? 'Hiển thị' : 'Ẩn'}</span></p
                         <p class="mb-0">Tồn kho: ${item.inventory}</p>
-                        <p class="mb-0">Danh mục: ${item.productCategoryProducts[0].category.title}</p>\
+                        <p class="mb-0">Danh mục: </p>\
                     </span>
                 </div>
             </div>
@@ -159,9 +162,9 @@ function listProducts(data) {
         $(".list").append(html)
     })
 
-    Paging(data, page => {
-        // if (page >= 1 && page <= data.data.countPage) {
-        GetAPI('/admin/products/indexJson', listProducts, { CurrentPage: page, SizePage: +SizePage.multipleSelect('getSelects') })
-        // }
-    })
+     Paging(data, page => {
+         // if (page >= 1 && page <= data.data.countPage) {
+         GetAPI('/admin/products/indexJson', listProducts, { CurrentPage: page, SizePage: +SizePage.multipleSelect('getSelects') })
+         // }
+     })
 }

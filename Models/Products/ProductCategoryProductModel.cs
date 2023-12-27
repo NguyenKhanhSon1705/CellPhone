@@ -13,4 +13,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
         [ForeignKey("CategoryID")]
         public CategoryProductModel Category {set; get;}
+
+        // public List<ProductModel> listproducts {set; get;}
     }

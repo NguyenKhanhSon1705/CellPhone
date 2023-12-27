@@ -29,6 +29,8 @@ public class CategoryProductModel
     // Các Category con
     public ICollection<CategoryProductModel> CategoryChildren { get; set; }
 
+    [JsonIgnore]
+    public ICollection<ProductCategoryProductModel> productCategoryProduct {get;set;}
     // Category cha (FKey)
     [Display(Name = "Danh mục cha")]
     public int? ParentCategoryId { get; set; }
@@ -37,6 +39,7 @@ public class CategoryProductModel
     [Display(Name = "Danh mục cha")]
     [JsonIgnore]
     public CategoryProductModel ParentCategory { set; get; }
+    
 
 
     public void ChildCategoryIDs(ICollection<CategoryProductModel> childcates, List<int> lists)
@@ -48,7 +51,6 @@ public class CategoryProductModel
         {
             lists.Add(category.Id);
             ChildCategoryIDs(category.CategoryChildren, lists);
-
         }
     }
 

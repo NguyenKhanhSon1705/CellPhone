@@ -75,4 +75,21 @@ public class Functions
         return formattedValue;
     }
 
+    public static async Task<string> HandleFile(IFormFile file, string route){
+
+        if (file != null && file.Length > 0)
+        {
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", route, file.FileName);
+            using (var stream = System.IO.File.Create(path))
+            {
+                await file.CopyToAsync(stream);
+            }
+            return "/" + route + file.FileName;
+        }
+        else
+        {
+            return "";
+        }
+    }
+    
 }

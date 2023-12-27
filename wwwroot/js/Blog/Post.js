@@ -243,23 +243,7 @@ function modelCategory(params = null) {
             $('#previewImage').attr('src', '/images/loader.gif');
         }
     });
-    // $(document).on('click', '.form-submit', function () {
-    //     // Lấy giá trị từ Froala Editor
-    //     var content = editor.html.get();
-    //     console.log(content); // In giá trị ra console
-
-    //     var $content = $(content);
-
-    //     // Lấy tất cả các thẻ <img> trong nội dung
-    //     var $images = $content.find('img');
-
-    //     // Lặp qua từng ảnh để lấy thông tin hoặc thực hiện các bước lưu trữ
-    //     $images.each(function (index, image) {
-    //         var src = $(image).attr('src');
-    //         // Tiến hành xử lý src của ảnh (ví dụ: lưu vào cơ sở dữ liệu, hiển thị, v.v.)
-    //         console.log('Image ' + (index + 1) + ': ' + src);
-    //     });
-    // });
+    
 
     Validate('#Create', (dataInput) => {
         dataInput.CategoryIDs = [(+$('#multiple').multipleSelect('getSelects') === 0 ? null : +$('#multiple').multipleSelect('getSelects'))]

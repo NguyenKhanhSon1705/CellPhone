@@ -129,7 +129,7 @@ namespace CellPhone.Migrations
                     b.HasIndex("Slug")
                         .IsUnique();
 
-                    b.ToTable("Category", (string)null);
+                    b.ToTable("Category");
                 });
 
             modelBuilder.Entity("CategoryProductModel", b =>
@@ -162,7 +162,7 @@ namespace CellPhone.Migrations
                     b.HasIndex("Slugc")
                         .IsUnique();
 
-                    b.ToTable("CategoryProduct", (string)null);
+                    b.ToTable("CategoryProduct");
                 });
 
             modelBuilder.Entity("ContactModel", b =>
@@ -197,7 +197,64 @@ namespace CellPhone.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("contacts", (string)null);
+                    b.ToTable("contacts");
+                });
+
+            modelBuilder.Entity("ImportDetailModel", b =>
+                {
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ImportID")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProductID", "ImportID");
+
+                    b.HasIndex("ImportID");
+
+                    b.ToTable("importDetails");
+                });
+
+            modelBuilder.Entity("ImportModel", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("StatusID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SuppelierID")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("TotalQuantity")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserID")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("StatusID");
+
+                    b.HasIndex("SuppelierID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("imports");
                 });
 
             modelBuilder.Entity("MenuAdminModel", b =>
@@ -207,15 +264,12 @@ namespace CellPhone.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ActionName")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Areas")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("ControllerName")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<int>("IsActive")
@@ -225,7 +279,7 @@ namespace CellPhone.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("MenuOrder")
+                    b.Property<int?>("MenuOrder")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -235,14 +289,14 @@ namespace CellPhone.Migrations
                     b.Property<int?>("ParentMenuId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Position")
+                    b.Property<int?>("Position")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
 
                     b.HasIndex("ParentMenuId");
 
-                    b.ToTable("menuAdmin", (string)null);
+                    b.ToTable("menuAdmin");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -373,6 +427,88 @@ namespace CellPhone.Migrations
                     b.ToTable("UserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("OrderDetailsModel", b =>
+                {
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OrderID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProductID", "OrderID");
+
+                    b.HasIndex("OrderID");
+
+                    b.ToTable("orderDetails");
+                });
+
+            modelBuilder.Entity("OrderModel", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Notes")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PaymentMethod")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("ShipDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("StaffApprove")
+                        .HasColumnType("longtext");
+
+                    b.Property<int?>("StatusID")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("TotalQuantity")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserID")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("StatusID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("orders");
+                });
+
             modelBuilder.Entity("PostCategoryModel", b =>
                 {
                     b.Property<int>("PostID")
@@ -385,7 +521,7 @@ namespace CellPhone.Migrations
 
                     b.HasIndex("CategoryID");
 
-                    b.ToTable("PostCategory", (string)null);
+                    b.ToTable("PostCategory");
                 });
 
             modelBuilder.Entity("PostModel", b =>
@@ -434,7 +570,7 @@ namespace CellPhone.Migrations
                     b.HasIndex("Slug")
                         .IsUnique();
 
-                    b.ToTable("posts", (string)null);
+                    b.ToTable("posts");
                 });
 
             modelBuilder.Entity("ProductCategoryProductModel", b =>
@@ -449,7 +585,7 @@ namespace CellPhone.Migrations
 
                     b.HasIndex("CategoryID");
 
-                    b.ToTable("ProductCategoryProduct", (string)null);
+                    b.ToTable("ProductCategoryProduct");
                 });
 
             modelBuilder.Entity("ProductDetailModel", b =>
@@ -497,7 +633,7 @@ namespace CellPhone.Migrations
 
                     b.HasIndex("ProductID");
 
-                    b.ToTable("productDetail", (string)null);
+                    b.ToTable("productDetail");
                 });
 
             modelBuilder.Entity("ProductImageModel", b =>
@@ -517,7 +653,7 @@ namespace CellPhone.Migrations
 
                     b.HasIndex("ProductID");
 
-                    b.ToTable("ProductImages", (string)null);
+                    b.ToTable("ProductImages");
                 });
 
             modelBuilder.Entity("ProductModel", b =>
@@ -545,6 +681,9 @@ namespace CellPhone.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<decimal>("PriceOld")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<int>("Promotion")
                         .HasColumnType("int");
 
@@ -567,7 +706,61 @@ namespace CellPhone.Migrations
                     b.HasIndex("Slugp")
                         .IsUnique();
 
-                    b.ToTable("Product", (string)null);
+                    b.ToTable("Product");
+                });
+
+            modelBuilder.Entity("StatusModel", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("StatusName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("statuses");
+                });
+
+            modelBuilder.Entity("SupplierModel", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("phone")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("suppliers");
                 });
 
             modelBuilder.Entity("CategoryModel", b =>
@@ -586,6 +779,52 @@ namespace CellPhone.Migrations
                         .HasForeignKey("ParentCategoryId");
 
                     b.Navigation("ParentCategory");
+                });
+
+            modelBuilder.Entity("ImportDetailModel", b =>
+                {
+                    b.HasOne("ImportModel", "Import")
+                        .WithMany("listImportDetails")
+                        .HasForeignKey("ImportID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProductModel", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Import");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("ImportModel", b =>
+                {
+                    b.HasOne("StatusModel", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("SupplierModel", "Suppelier")
+                        .WithMany()
+                        .HasForeignKey("SuppelierID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AppUserModel", "User")
+                        .WithMany()
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Status");
+
+                    b.Navigation("Suppelier");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("MenuAdminModel", b =>
@@ -648,6 +887,42 @@ namespace CellPhone.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("OrderDetailsModel", b =>
+                {
+                    b.HasOne("OrderModel", "order")
+                        .WithMany("orderDetail")
+                        .HasForeignKey("OrderID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProductModel", "products")
+                        .WithMany()
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("order");
+
+                    b.Navigation("products");
+                });
+
+            modelBuilder.Entity("OrderModel", b =>
+                {
+                    b.HasOne("StatusModel", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusID");
+
+                    b.HasOne("AppUserModel", "User")
+                        .WithMany()
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Status");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("PostCategoryModel", b =>
                 {
                     b.HasOne("CategoryModel", "Category")
@@ -681,7 +956,7 @@ namespace CellPhone.Migrations
             modelBuilder.Entity("ProductCategoryProductModel", b =>
                 {
                     b.HasOne("CategoryProductModel", "Category")
-                        .WithMany()
+                        .WithMany("productCategoryProduct")
                         .HasForeignKey("CategoryID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -738,11 +1013,23 @@ namespace CellPhone.Migrations
             modelBuilder.Entity("CategoryProductModel", b =>
                 {
                     b.Navigation("CategoryChildren");
+
+                    b.Navigation("productCategoryProduct");
+                });
+
+            modelBuilder.Entity("ImportModel", b =>
+                {
+                    b.Navigation("listImportDetails");
                 });
 
             modelBuilder.Entity("MenuAdminModel", b =>
                 {
                     b.Navigation("MenuChildren");
+                });
+
+            modelBuilder.Entity("OrderModel", b =>
+                {
+                    b.Navigation("orderDetail");
                 });
 
             modelBuilder.Entity("PostModel", b =>

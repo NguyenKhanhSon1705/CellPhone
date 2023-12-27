@@ -27,9 +27,16 @@ public class CellPhoneDB : IdentityDbContext<AppUserModel>
         {
             entity.HasIndex(c => c.Slug).IsUnique();
         });
+        
         builder.Entity<PostCategoryModel>(entity =>
         {
             entity.HasKey(c => new { c.PostID, c.CategoryID });
+        });
+        builder.Entity<OrderDetailsModel>(entity =>{
+            entity.HasKey(r => new{r.ProductID , r.OrderID});
+        });
+        builder.Entity<ImportDetailModel>(entity =>{
+            entity.HasKey(r => new{r.ProductID , r.ImportID});
         });
 
 
@@ -51,7 +58,6 @@ public class CellPhoneDB : IdentityDbContext<AppUserModel>
         });
     }
     public DbSet<ContactModel> contacts { get; set; }
-    // public DbSet<MenuAdminModel> menuAdmin {get; set;}
     public DbSet<CategoryModel> categories { get; set; }
     public DbSet<PostModel> posts { get; set; }
     public DbSet<PostCategoryModel> postCategories { get; set; }
@@ -66,7 +72,12 @@ public class CellPhoneDB : IdentityDbContext<AppUserModel>
     public DbSet<ProductDetailModel> productDetail { get; set; }
     public DbSet<MenuAdminModel> menuAdmin {get;set;}
 
-    
+    public DbSet<StatusModel> statuses {get;set;}
+    public DbSet<OrderModel> orders {get;set;}
+    public DbSet<OrderDetailsModel> orderDetails {get;set;}
 
 
+    public DbSet<SupplierModel> suppliers {get;set;}
+    public DbSet<ImportModel> imports{get;set;}
+    public DbSet<ImportDetailModel> importDetails{get;set;}
 }
